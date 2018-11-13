@@ -102,7 +102,7 @@ workflows:
   build-deploy:
     jobs:      
       - build:
-        context: cislab
+          context: cislab
       - deploy:
           context: cislab
           requires:
