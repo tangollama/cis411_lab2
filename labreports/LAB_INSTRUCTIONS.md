@@ -1,5 +1,5 @@
-# CIS 411 Lab 2: Docker + CircleCI + AWS ECR & ECS
-The purpose of this lab is to get hands on experience working with Docker, CircleCI, and Amazon Web Services to create a CI/CD pipeline. Though the lab is generally paint by numbers, the hands on experience with the tools is meant to prepare students to improvise on this relatively simple implementation as teams approach CIS 412.
+# CIS 411 Lab 2: GitHub + Docker + CircleCI + Heroku
+The purpose of this lab is to get hands on experience working with Docker, CircleCI, and a Cloud Service Provider like Heroku to create a CI/CD pipeline. Though the lab is generally paint by numbers, the hands on experience with the tools is meant to prepare students to improvise on this relatively simple implementation as teams approach CIS 412.
 
 ## Submitting work
 Lab reports will be submitted by 
@@ -12,38 +12,62 @@ Lab reports will be submitted by
 * If you are unfamiliar with markdown, I recommend checking [1000 places on the Interwebs](http://lmgtfy.com/?q=learn+markdown) that will help you close that gap.
 
 # Step 0: Installing appropriate tools / logins
-1. If you don't have a GitHub account already, [create one](https://github.com/join). 2. If you don't already have _git_ installed on your development machine, [do so](https://git-scm.com/downloads).
-2. Install a text editor or some sort of application for local development. Lately, I'm partial to [Visual Studio Code](https://code.visualstudio.com/) and my instructions assume it's use, but you're welcome to diviate. _Each one should choose their own sword, etc. etc._
-3. Install Docker on your local development environment, either for [Mac](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/), or various Linux distributions.
-4. Be sure that you (signup for an account on Docker Hub)[https://hub.docker.com/] and keep track of your username and password (You'll need that later).
-5. You should have received an invitation to an AWS Educate Classroom in your student email. Accept that invitation and [login]() and go to the [classroom](https://labs.vocareum.com/main/main.php?m=editor&nav=1&asnid=37694&stepid=37695). From here, you can access the [AWS Console](https://console.aws.amazon.com/console/home?region=us-east-1#) and the Account Details (which you'll also need later).
-![AWS Educate](../assets/aws_educate_screenshot.png "AWS Educate")
+1. If you don't have a GitHub account already, [create one](https://github.com/join). 
+2. [Install _git_](https://git-scm.com/downloads) on your development environment.
+3. Install a text editor or some sort of application for local development. Lately, I'm partial to [Visual Studio Code](https://code.visualstudio.com/) and my instructions assume it's use, but you're welcome to diviate. _Each one should choose their own sword, etc. etc._
+4. Install Docker on your development environment, either for [Mac](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/), or various Linux distributions.
+5. [Signup for an account on Docker Hub](https://hub.docker.com/) and keep track of your username and password (You'll need that later).
+6. [Signup for a Heroku](https://signup.heroku.com) account (You'll need that later too).
+7. [Download and install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
 
 
-# Step 1: Fork this repository
+# Step 1: Fork and clone this repository
 1. After logging in, navigate to the [root](https://github.com/tangollama/cis411_lab2) of this repository.
 2. Fork this repository to your personal GitHub account (hint: read the page).
+3. Navigate to your forked repository in your GitHub account and copy the reference to your repository in from the <button>Clone or Download</button> button.
+4. Open the terminal or command line interface on your development machine, navigate to your chosen working directory, and execute the following command: 
+```
+> git clone [YOUR COPIED GITHUB CLONE REFERENCE]
+```
 
-# Step 2: Clone your forked repository from the command line
-1. Navigate to your forked repository in your GitHub account and copy the reference to your repository in from the <button>Clone or Download</button> button.
-2. Open the terminal or command line interface on your development machine, navigate to your chosen working directory, and execute the following command: ```git clone [YOUR COPIED GITHUB CLONE REFERENCE]```.
-3. Navigate to that directory ```cd cis411_lab2```.
-4. Run ```npm install``` and watch the magic happen.
-5. Run ```npm start``` and navigate to http://localhost:4000/graphql.
-6. Verify that you can see the GraphiQL interface and shut down the server with the use of ```Ctrl+C```
+5. Navigate to that directory 
+```
+> cd cis411_lab2
+```
 
-# Step 3: Setup a Continuous Integration configuration
+6. Run npm install and watch the magic happen.
+```
+> npm install
+``` 
+
+7. Run the command below and navigate to [http://localhost:4000/graphql](http://localhost:4000/graphql) in a web browser.
+```
+> npm start
+``` 
+
+8. Verify that you can see the GraphiQL interface and shut down the server with the use of ```Ctrl+C``` in the command line window that is currently running the ```npm start``` command.
+
+# Step 2: Setup a Continuous Integration configuration
 1. [Signup for CircleCI](https://circleci.com/signup/) with your GitHub account.
-2. Login to CircleCI and add your project to your account (ex. https://circleci.com/add-projects/gh/[YOUR_GITHUB_HANDLE]) by clicking _Add Project_.
+2. Login to CircleCI and add your project to your account (ex. https://circleci.com/add-projects/gh/[YOUR_GITHUB_HANDLE]) by clicking _Add Project_ and selecting your forked repository for cis411_lab2.
 3. Follow the setup instructions, including creating the .circleci directory and adding the default config.yml file.
 ![CircleCI setup](../assets/circleci_setup.png "CircleCI Setup")
-- Create a directory name .circleci in your project ```mkdir .circleci```.
+- Create a directory name .circleci in your project 
+```
+> mkdir .circleci
+```
 - Add a file to that directory named config.yml ```code .circleci/config.yml```.
 - Copy the content for the setup instructions into config.yml.
-4. Add the related .circleci files to your forked repository. **These files must be present in your submitted pull request.**
+4. Add the  .circleci directory to your forked repository. **Note: these files must be present in your submitted pull request.**
+```
+> git add .circleci
+> git commit -m "something something something"
+> git push
+```
+5. Verify that the current config file is correct and the project is building in CircleCI.
 
-# Step 4: Create a Dockerfile and run docker commands
-1. Create a file in the root directory of your repository called **Dockerfile**.
+# Step 3: Create a Dockerfile and run docker commands
+1. Create a file in the **root directory** of your repository called **Dockerfile**.
 2. Add the following content to that file and save it:
 ```
 FROM node:11
@@ -56,17 +80,30 @@ EXPOSE 4000
 ```
 3. Run the following command:
 ```
-docker login
+> docker login
 ```
 4. Provide your Docker Hub username and password
 5. Build and run the Docker image using the following commands from _within_ the cis411_lab2 directory:
 ```
-docker build -t lab2 .
-docker run -p 4000:4000 lab2 &
+> docker build -t lab2 .
+> docker run -p 4000:4000 lab2 &
 ```
 6. Navigate to http://localhost:4000/graphql and verify that you can access GraphiQL.
-7. Shotdown the docker container by running the following comamnd: 
+7. Shutdown the docker container by running the following command: 
 ```
-docker stop $(docker ps -aq)
+> docker stop $(docker ps -aq)
 ```
-8. Add the related **Dockerfile** files to your forked repository. **This file must be present in your submitted pull request.**
+8. Add the related **Dockerfile** to your forked repository. **This file must be present in your submitted pull request.**
+```
+git add Dockerfile
+git commit -m "something something something Docker something"
+git push
+```
+
+# Step 4: Setup continuous deployment to Heroku
+There are _lots_ of solutions for providing a CD endpoint including AWS, Google Cloud, Asure, Digital Ocean, etc. For the purposes of this assignment, we're going to use **Heroku** for one reason: it's _relatively_ easy.
+
+1. Login to heroku through the CLI using the username and password you created when you signed up for an account.
+```
+> heroku login
+```
