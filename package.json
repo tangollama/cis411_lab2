@@ -2,6 +2,9 @@
   "name": "cis411_lab0",
   "version": "0.0.1",
   "description": "GitHub and CircleCI building a simple GraphQL service",
+  "engines": {
+    "node": "11.0.0"
+  },
   "main": "server.js",
   "scripts": {
     "run": "node server.js",
