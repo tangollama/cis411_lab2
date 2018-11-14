@@ -5,8 +5,8 @@ jobs:
       - image: circleci/node:11
     steps:
       - checkout
-      - setup_remote_docker
-# Download and cache dependencies
+
+      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -19,90 +19,26 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: Setup common environment variables
-          command: |
-            echo 'export ECR_REPOSITORY_NAME="cis411lab2"' >> $BASH_ENV
-            echo 'export FULL_IMAGE_NAME="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${ECR_REPOSITORY_NAME}:${CIRCLE_SHA1}"' >> $BASH_ENV
-      - run:
-          name: Build image
-          command: |
-            docker build -t $FULL_IMAGE_NAME .
-      - run:
-          name: Test image
-          command: |
-            docker run -d -p 4000:4000 --name built-image $FULL_IMAGE_NAME
-      - run:
-          name: Save image to an archive
-          command: |
-            mkdir docker-image
-            docker save -o docker-image/image.tar $FULL_IMAGE_NAME
-      - persist_to_workspace:
-          root: .
-          paths:
-            - docker-image
-  deploy:  
+        
+      # run tests!
+      - run: yarn test
+
+  deploy:
     docker:
-      - image: circleci/python:3.6.1
-    environment:
-      AWS_DEFAULT_OUTPUT: json
+      - image: buildpack-deps:trusty
     steps:
       - checkout
-      - setup_remote_docker
-      - attach_workspace:
-          at: workspace
-      - restore_cache:
-          key: v1-{{ checksum "requirements.txt" }}
       - run:
-          name: Install awscli
+          name: Deploy Master to Heroku
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
-      - save_cache:
-          key: v1-{{ checksum "requirements.txt" }}
-          paths:
-            - "venv"
-      - run:
-          name: Load image
-          command: |
-            docker load --input workspace/docker-image/image.tar
-      - run:
-          name: Setup common environment variables
-          command: |
-            echo 'export ECR_REPOSITORY_NAME="cis411lab2"' >> $BASH_ENV
-            echo 'export ECS_CLUSTER_NAME="cis411lab2-cluster"' >> $BASH_ENV
-            echo 'export ECS_SERVICE_NAME="cis411lab2-service"' >> $BASH_ENV
-      - run:
-          name: Push image
-          command: |
-            . venv/bin/activate
-            eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_REPOSITORY_NAME:$CIRCLE_SHA1
-      - run:
-          name: Deploy
-          command: |
-            . venv/bin/activate
-            export ECS_TASK_FAMILY_NAME="cis411lab2-service"
-            export ECS_CONTAINER_DEFINITION_NAME="cis411lab2-service"
-            export EXECUTION_ROLE_ARN="arn:aws:iam::$AWS_ACCOUNT_ID:role/cis411lab2-ecs-execution-role"
-            ./deploy.sh
-      - run:
-          name: Test deployment (Please manually tear down AWS resources after use, if desired)
-          command: |
-            . venv/bin/activate
-            TARGET_GROUP_ARN=$(aws ecs describe-services --cluster $ECS_CLUSTER_NAME --services $ECS_SERVICE_NAME | jq -r '.services[0].loadBalancers[0].targetGroupArn')
-            ELB_ARN=$(aws elbv2 describe-target-groups --target-group-arns $TARGET_GROUP_ARN | jq -r '.TargetGroups[0].LoadBalancerArns[0]')
-            ELB_DNS_NAME=$(aws elbv2 describe-load-balancers --load-balancer-arns $ELB_ARN | jq -r '.LoadBalancers[0].DNSName')
-            curl http://$ELB_DNS_NAME | grep "Hello World!"
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+
 workflows:
   version: 2
   build-deploy:
-    jobs:      
-      - build:
-          context: cislab
+    jobs:
+      - build
       - deploy:
-          context: cislab
           requires:
             - build
           filters:

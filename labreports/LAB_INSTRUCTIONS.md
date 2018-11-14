@@ -95,15 +95,81 @@ EXPOSE 4000
 ```
 8. Add the related **Dockerfile** to your forked repository. **This file must be present in your submitted pull request.**
 ```
-git add Dockerfile
-git commit -m "something something something Docker something"
-git push
+> git add Dockerfile
+> git commit -m "something something something Docker something"
+> git push
 ```
 
-# Step 4: Setup continuous deployment to Heroku
+9. **Answer the following in your lab report**: why would a containerized version of an application be beneficial if you can run the application locally already?
+
+# Step 4: Setup a Heroku application
 There are _lots_ of solutions for providing a CD endpoint including AWS, Google Cloud, Asure, Digital Ocean, etc. For the purposes of this assignment, we're going to use **Heroku** for one reason: it's _relatively_ easy.
 
 1. Login to heroku through the CLI using the username and password you created when you signed up for an account.
 ```
 > heroku login
+```
+2. Initiate a Heroku app. This can be handled through [the user interface](http://heroku.com/deploy) or via the command line instructions below, replacing the [GITHUB_HANDLE] with your GitHub handle.
+```
+> heroku apps:create cis411lab2-[GITHUB_HANDLE] -b heroku/nodejs
+> git push heroku master 
+```
+You should see quite a bit of output as the application builds itself and deploys to Heroku.
+
+3. Open a web browser and go to the following URL to ensure your app is running:
+```
+http://[GITHUB_HANDLE].herokuapp.com/graphql
+```
+4. Include this URL in your lab report. 
+
+# Step 5: Configure CircleCI for Docker and Heroku
+
+1. Run the following command to generate a Heroku API tokem:
+```
+heroku authorizations:create -d "CIS411 Lab token something something"
+```
+You should see a response that looks like this.
+```
+Creating OAuth Authorization... done
+Client:      <none>
+ID:          xxxxxx-xxxx-xxx-xxxx-xxxxxxxx
+Description: CIS411 Lab token something something
+Scope:       global
+Token:       xxxxxx-xxxxx-xxxx-xxxx-xxxxxxx
+Updated at:  Tue Nov 13 2018 23:53:14 GMT-0500 (Eastern Standard Time) (less than a minute ago)
+```
+
+2. [Open the CircleCI](https://circleci.com/dashboard) user interface and navigate to: 
+```
+Settings > Projects > [Click on the Gear icon in the far right corner of this project] > Environment Variables
+```
+
+3. Add the following two environment variables to CircleCI: HEROKU_API_KEY equal to the Token generated from the command above and HEROKU_APP_NAME equal to the name of your Heroku app: cis411lab2-[GITHUB_HANDLE].
+![HEROKU_APP_NAME](../assets/ci_app_name.png "HEROKU_APP_NAME")
+
+![HEROKU_API_KEY](../assets/ci_api_key.png "HEROKU_API_KEY")
+
+2. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
+```
+  deploy:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
 ```
