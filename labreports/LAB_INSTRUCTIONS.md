@@ -100,8 +100,6 @@ EXPOSE 4000
 > git push
 ```
 
-9. **Answer the following in your lab report**: why would a containerized version of an application be beneficial if you can run the application locally already?
-
 # Step 4: Setup a Heroku application
 There are _lots_ of solutions for providing a CD endpoint including AWS, Google Cloud, Asure, Digital Ocean, etc. For the purposes of this assignment, we're going to use **Heroku** for one reason: it's _relatively_ easy.
 
@@ -120,9 +118,9 @@ You should see quite a bit of output as the application builds itself and deploy
 ```
 http://[GITHUB_HANDLE].herokuapp.com/graphql
 ```
-4. Include this URL in your lab report. 
+4. **Include this URL in your lab report.**
 
-# Step 5: Configure CircleCI for Docker and Heroku
+# Step 5: Configure CircleCI for CD to Heroku
 
 1. Run the following command to generate a Heroku API tokem:
 ```
@@ -143,13 +141,13 @@ Updated at:  Tue Nov 13 2018 23:53:14 GMT-0500 (Eastern Standard Time) (less tha
 ```
 Settings > Projects > [Click on the Gear icon in the far right corner of this project] > Environment Variables
 ```
+![Right side gear icon](../assets/ci_gear.png "gear icon")
 
 3. Add the following two environment variables to CircleCI: HEROKU_API_KEY equal to the Token generated from the command above and HEROKU_APP_NAME equal to the name of your Heroku app: cis411lab2-[GITHUB_HANDLE].
 ![HEROKU_APP_NAME](../assets/ci_app_name.png "HEROKU_APP_NAME")
-
 ![HEROKU_API_KEY](../assets/ci_api_key.png "HEROKU_API_KEY")
 
-2. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
+4. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
 ```
   deploy:
     docker:
@@ -173,3 +171,16 @@ workflows:
             branches:
               only: master
 ```
+5. Commit and save those changes and push them to your GitHub repository.
+```
+> git add *
+> git commit -m "Changes something something"
+> git push origin master
+```
+6. Login to CircleCI and **take a screenshot of the successful build and deployment** of your application to Heroku.
+![Success](../assets/ci_success.png "Success")
+
+# Step 6: Reflection / Feedback
+Complete the feedback section of the Lab report with responses to the following.
+1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
