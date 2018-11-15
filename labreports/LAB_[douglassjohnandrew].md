@@ -3,9 +3,9 @@ Course: Messiah College CIS 411, Fall 2018
 
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)
 
-Name: YOUR NAME
+Name: Andrew Douglass
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)
+GitHub: [douglassjohnandrew](https://github.com/douglassjohnandrew)
 
 # Required Content
 
