@@ -14,7 +14,7 @@ Lab reports will be submitted by
 # Step 0: Installing appropriate tools / logins
 1. If you don't have a GitHub account already, [create one](https://github.com/join). 
 2. [Install _git_](https://git-scm.com/downloads) on your development environment.
-3. Install a text editor or some sort of application for local development. Lately, I'm partial to [Visual Studio Code](https://code.visualstudio.com/) and my instructions assume it's use, but you're welcome to diviate. _Each one should choose their own sword, etc. etc._
+3. Install a text editor or some sort of application for local development. Lately, I'm partial to [Visual Studio Code](https://code.visualstudio.com/) and my instructions assume it's use, but you're welcome to deviate. _Each one should choose their own sword, etc. etc._
 4. Install Docker on your development environment, either for [Mac](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/), or various Linux distributions.
 5. [Signup for an account on Docker Hub](https://hub.docker.com/) and keep track of your username and password (You'll need that later).
 6. [Signup for a Heroku](https://signup.heroku.com) account (You'll need that later too).
