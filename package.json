@@ -31,7 +31,7 @@
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
     "graphql": "^14.0.2",
-    "heroku": "^7.18.7",
+    "heroku": "^7.18.9",
     "lokijs": "^1.5.5",
     "uuid": "^3.3.2"
   },
