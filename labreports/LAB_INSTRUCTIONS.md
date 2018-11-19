@@ -50,15 +50,41 @@ Lab reports will be submitted by
 # Step 2: Setup a Continuous Integration configuration
 1. [Signup for CircleCI](https://circleci.com/signup/) with your GitHub account.
 2. Login to CircleCI and add your project to your account (ex. https://circleci.com/add-projects/gh/[YOUR_GITHUB_HANDLE]) by clicking _Add Project_ and selecting your forked repository for cis411_lab2.
-3. Follow the setup instructions, including creating the .circleci directory and adding the default config.yml file.
+3. Follow the setup instructions, including creating the .circleci directory and adding the content below to a config.yml file.
 ![CircleCI setup](../assets/circleci_setup.png "CircleCI Setup")
 - Create a directory name .circleci in your project 
 ```
 > mkdir .circleci
 ```
 - Add a file to that directory named config.yml ```code .circleci/config.yml```.
-- Copy the content for the setup instructions into config.yml.
-4. Add the  .circleci directory to your forked repository. **Note: these files must be present in your submitted pull request.**
+- Copy the content below into config.yml.
+```
+version: 2
+jobs:
+  build:  
+    docker:
+      - image: circleci/node:11
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+        
+      # run tests!
+      - run: yarn test
+```
+4. Save and add the .circleci directory to your forked repository. **Note: these files must be present in your submitted pull request.**
 ```
 > git add .circleci
 > git commit -m "something something something"
