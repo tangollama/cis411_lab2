@@ -28,10 +28,11 @@
   },
   "homepage": "https://github.com/tangollama/cis411_lab2#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "express-graphql": "^0.6.12",
+    "cross-spawn-async": "^2.2.5",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
-    "heroku": "^7.18.7",
+    "heroku": "^7.18.9",
     "lokijs": "^1.5.5",
     "uuid": "^3.3.2"
   },
