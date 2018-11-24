@@ -4,4 +4,4 @@ COPY package.json /dist
 RUN npm install
 COPY . /dist
 CMD node server.js
-EXPOSE 4000
+EXPOSE 8080
