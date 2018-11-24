@@ -14,7 +14,7 @@ GitHub: [kaiyuenleong](https://github.com/kaiyuenleong)
 3. Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository. (COMPLETE)
 4. Write the URL of your running Heroku app here: ```http://cis411lab2-kaiyuenleong.herokuapp.com/graphql``` 
 5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.  
-![successful build](https://github.com/kaiyuenleong/cis411_lab2/labreports/successful_build.jpg "CircleCi successful build")
+![successful build](https://github.com/kaiyuenleong/cis411_lab2/raw/master/labreports/successful_build.jpg "CircleCi successful build")
 6. Answer the questions below.
 7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
 
