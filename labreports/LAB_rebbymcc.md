@@ -14,7 +14,7 @@ GitHub: rebbymcc(https://github.com/rebbymcc)
 3. Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
 4. Write the URL of your running Heroku app here: http://[rebbymcc.herokuapp.com/graphql]```ex: http://[cis411lab2-tangollama.herokuapp.com/graphql```
 5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
-  [Screenshot of successful build](rebbymcc/cis411_lab2/success.png)
+  [Screenshot of successful build](https://github.com/rebbymcc/cis411_lab2/blob/master/success.png)
 6. Answer the questions below.
 7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
 
