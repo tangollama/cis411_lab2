@@ -19,4 +19,6 @@ GitHub: bbaumer18 (https://github.com/bbaumer18)
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+    - The benefits of using this is that it creates standardization of environment. This standardized environment can be used throughout the development process to ensure that all developers have the same environment as well as making sure that the environment is the same for development as well as deployment. It reduces the number of issues that arise from different versions of software packages being used in different parts of the process and creates uniformity for development through deployment. 
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+    - It provides the benefit of having a solution that automatically tests code that is added to the master branch and then, assuming that it passes those tests, automatically deploys that code to production. This eliminates the need for someone to manually push that code to production. It enables there to be a lot more updates to the production ready code so that the live product is as up to date as possible. 
