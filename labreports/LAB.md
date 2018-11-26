@@ -13,7 +13,8 @@ GitHub: [SamMahan](https://github.com/SamMahan)
 2. Create the directory ```./circleci``` and the file ```.circleci/config.yml``` in your project and push that change to your GitHub repository.
 3. Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
 4. Write the URL of your running Heroku app here: ```ex: https://cis411lab2-sammahan.herokuapp.com/graphql```
-5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.<a href="https://github.com/SamMahan/cis411_lab2/blob/master/labreports/Capture.JPG>here is my screen capture</a>
+5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
+{My Successful Build}{https://github.com/SamMahan/cis411_lab2/blob/master/labreports/Capture.JPG}
 6. Answer the questions below.
 7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
 
