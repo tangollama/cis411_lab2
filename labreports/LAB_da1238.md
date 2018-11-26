@@ -1,4 +1,4 @@
-Lab Report CIS411_Lab2
+# Lab Report CIS411_Lab2
 
 Course: Messiah College CIS 411, Fall 2018
 
@@ -9,6 +9,8 @@ Name: David Abraham
 GitHub: da1238
 
 Heroku Graphql URL:  http://cis411lab2-da1238.herokuapp.com/graphql
+
+## Questions
 
 Why would a containerized version of an application be beneficial if you can run the application locally already?
 
