@@ -2,9 +2,9 @@
 The purpose of this lab is to get hands on experience working with Docker, CircleCI, and a Cloud Service Provider like Heroku to create a CI/CD pipeline. Though the lab is generally paint by numbers, the hands on experience with the tools is meant to prepare students to improvise on this relatively simple implementation as teams approach CIS 412.
 
 ## Submitting work
-Lab reports will be submitted by 
-1. Generating a markdown file in the labreports directory under the naming convention: **LAB_[GITHUB HANDLE].md**, 
-2. Submitting a Pull Request to this repository that include your lab report as well as any accompanying images/files (there are diagrams required in the lab content), and 
+Lab reports will be submitted by
+1. Generating a markdown file in the labreports directory under the naming convention: **LAB_[GITHUB HANDLE].md**,
+2. Submitting a Pull Request to this repository that include your lab report as well as any accompanying images/files (there are diagrams required in the lab content), and
 3. Providing the URL for that pull request in the Canvas/LMS platform
 
 * Throughout these instructions, you'll find that **items marked in bold text** reference content you are to submit in your lab report.
@@ -12,7 +12,7 @@ Lab reports will be submitted by
 * If you are unfamiliar with markdown, I recommend checking [1000 places on the Interwebs](http://lmgtfy.com/?q=learn+markdown) that will help you close that gap.
 
 # Step 0: Installing appropriate tools / logins
-1. If you don't have a GitHub account already, [create one](https://github.com/join). 
+1. If you don't have a GitHub account already, [create one](https://github.com/join).
 2. [Install _git_](https://git-scm.com/downloads) on your development environment.
 3. Install a text editor or some sort of application for local development. Lately, I'm partial to [Visual Studio Code](https://code.visualstudio.com/) and my instructions assume it's use, but you're welcome to diviate. _Each one should choose their own sword, etc. etc._
 4. Install Docker on your development environment, either for [Mac](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/), or various Linux distributions.
@@ -25,12 +25,12 @@ Lab reports will be submitted by
 1. After logging in, navigate to the [root](https://github.com/tangollama/cis411_lab2) of this repository.
 2. Fork this repository to your personal GitHub account (hint: read the page).
 3. Navigate to your forked repository in your GitHub account and copy the reference to your repository in from the <button>Clone or Download</button> button.
-4. Open the terminal or command line interface on your development machine, navigate to your chosen working directory, and execute the following command: 
+4. Open the terminal or command line interface on your development machine, navigate to your chosen working directory, and execute the following command:
 ```
 > git clone [YOUR COPIED GITHUB CLONE REFERENCE]
 ```
 
-5. Navigate to that directory 
+5. Navigate to that directory
 ```
 > cd cis411_lab2
 ```
@@ -38,12 +38,12 @@ Lab reports will be submitted by
 6. Run npm install and watch the magic happen.
 ```
 > npm install
-``` 
+```
 
 7. Run the command below and navigate to [http://localhost:4000/graphql](http://localhost:4000/graphql) in a web browser.
 ```
 > npm start
-``` 
+```
 
 8. Verify that you can see the GraphiQL interface and shut down the server with the use of ```Ctrl+C``` in the command line window that is currently running the ```npm start``` command.
 
@@ -52,7 +52,7 @@ Lab reports will be submitted by
 2. Login to CircleCI and add your project to your account (ex. https://circleci.com/add-projects/gh/[YOUR_GITHUB_HANDLE]) by clicking _Add Project_ and selecting your forked repository for cis411_lab2.
 3. Follow the setup instructions, including creating the .circleci directory and adding the default config.yml file.
 ![CircleCI setup](../assets/circleci_setup.png "CircleCI Setup")
-- Create a directory name .circleci in your project 
+- Create a directory name .circleci in your project
 ```
 > mkdir .circleci
 ```
@@ -89,7 +89,7 @@ EXPOSE 4000
 > docker run -p 4000:4000 lab2 &
 ```
 6. Navigate to http://localhost:4000/graphql and verify that you can access GraphiQL.
-7. Shutdown the docker container by running the following command: 
+7. Shutdown the docker container by running the following command:
 ```
 > docker stop $(docker ps -aq)
 ```
@@ -110,7 +110,7 @@ There are _lots_ of solutions for providing a CD endpoint including AWS, Google 
 2. Initiate a Heroku app. This can be handled through [the user interface](http://heroku.com/deploy) or via the command line instructions below, replacing the [GITHUB_HANDLE] with your GitHub handle.
 ```
 > heroku apps:create cis411lab2-[GITHUB_HANDLE] -b heroku/nodejs
-> git push heroku master 
+> git push heroku master
 ```
 You should see quite a bit of output as the application builds itself and deploys to Heroku.
 
@@ -119,6 +119,8 @@ You should see quite a bit of output as the application builds itself and deploy
 http://[GITHUB_HANDLE].herokuapp.com/graphql
 ```
 4. **Include this URL in your lab report.**
+
+Heroku App URL: https://cis411lab2-joshuasimmons33.herokuapp.com/graphql
 
 # Step 5: Configure CircleCI for CD to Heroku
 
@@ -137,7 +139,7 @@ Token:       xxxxxx-xxxxx-xxxx-xxxx-xxxxxxx
 Updated at:  Tue Nov 13 2018 23:53:14 GMT-0500 (Eastern Standard Time) (less than a minute ago)
 ```
 
-2. [Open the CircleCI](https://circleci.com/dashboard) user interface and navigate to: 
+2. [Open the CircleCI](https://circleci.com/dashboard) user interface and navigate to:
 ```
 Settings > Projects > [Click on the Gear icon in the far right corner of this project] > Environment Variables
 ```
@@ -179,6 +181,8 @@ workflows:
 ```
 6. Login to CircleCI and **take a screenshot of the successful build and deployment** of your application to Heroku.
 ![Success](../assets/ci_success.png "Success")
+
+![Build](../assets/HerokuBuild.png "Build")
 
 # Step 6: Reflection / Feedback
 Complete the feedback section of the Lab report with responses to the following.
