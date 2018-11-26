@@ -148,7 +148,7 @@ http://[GITHUB_HANDLE].herokuapp.com/graphql
 
 # Step 5: Configure CircleCI for CD to Heroku
 
-1. Run the following command to generate a Heroku API tokem:
+1. Run the following command to generate a Heroku API token:
 ```
 heroku authorizations:create -d "CIS411 Lab token something something"
 ```
@@ -209,4 +209,4 @@ workflows:
 # Step 6: Reflection / Feedback
 Complete the feedback section of the Lab report with responses to the following.
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
-2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+2. If we have the ability to publish directly to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
