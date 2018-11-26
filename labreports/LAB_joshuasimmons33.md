@@ -182,6 +182,8 @@ workflows:
 6. Login to CircleCI and **take a screenshot of the successful build and deployment** of your application to Heroku.
 ![Success](../assets/ci_success.png "Success")
 
+Heroku Build Screenshot
+
 ![Build](../assets/HerokuBuild.png "Build")
 
 # Step 6: Reflection / Feedback
