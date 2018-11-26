@@ -3,9 +3,9 @@ Course: Messiah College CIS 411, Fall 2018
 
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)
 
-Name: YOUR NAME
+Name: Ellis Madagan
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)
+GitHub: [em1382](https://github.com/em1382)
 
 # Required Content
 
@@ -20,4 +20,6 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+A containerized version of an application is beneficial for a variety of reasons, such as simplifying configuration. For example, with a Docker image, you configure once, and your entire environment is shipped with the image, making deployment on a variety of systems a breeze. Another example of a use case of Docker would be code pipeline management. Docker provides a consistent environment for the application from development through production, making the code development and deployment pipeline easier to work with.
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+CircleCI can be set up to run additional steps, like running tests for our application, or doing something with our environment. Therefore, it is beneficial to use it concurrently with Heroku, instead of just pushing to Heroku.
