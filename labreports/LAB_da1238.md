@@ -9,6 +9,7 @@ Name: David Abraham
 GitHub: da1238
 
 Heroku Graphql URL:  http://cis411lab2-da1238.herokuapp.com/graphql
+![alt text](https://github.com/da1238/cis411_lab1/blob/master/labreports/Untitled%20Diagram-2.png?raw=true)
 
 ## Questions
 
