@@ -1,15 +1,13 @@
 # Lab Report CIS411_Lab2
 
 Course: Messiah College CIS 411, Fall 2018
-
 Instructors: Joel Worrall & Trevor Bunch
-
 Name: David Abraham
-
 GitHub: da1238
 
+
 Heroku Graphql URL:  http://cis411lab2-da1238.herokuapp.com/graphql
-![alt text](https://github.com/da1238/cis411_lab1/blob/master/labreports/Untitled%20Diagram-2.png?raw=true)
+![alt text](https://github.com/da1238/cis411_lab2/labreports/Screen Shot 2018-11-26 at 2.58.39 PM.png?raw=true)
 
 ## Questions
 
