@@ -7,16 +7,18 @@ Name: Tyler Collins
 
 GitHub: tc1240(https://github.com/tc1240)
 
-# Required Content
+# Short and Sweet Lab Report
 
-1. Generate a markdown file in the labreports directoy named LAB_[GITHUB HANDLE].md. Write your lab report there.
-2. Create the directory ```./circleci``` and the file ```.circleci/config.yml``` in your project and push that change to your GitHub repository.
-3. Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
-4. Write the URL of your running Heroku app here: ```http://cis411lab2-tc1240.herokuapp.com/graphql```
-5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
-6. Answer the questions below.
-7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
+## Delivered Content
 
-## Questions
+1. Running Heroku app is here: ```http://cis411lab2-tc1240.herokuapp.com/graphql```
+2. ![Image of Successful build](..\assets\CircleCiandHerokuBuild.JPG)
+
+## Answered Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+
+- It would be beneficial because you can use other tools like CircleCI on it. Also you can conceptualize a containerized application more easily than in this context than using localhost
+
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+
+- CircleCI provides the ability to receive updates on the build of your project via email without you having to monitor it directly. This allows you to see status updates on your code more easily
