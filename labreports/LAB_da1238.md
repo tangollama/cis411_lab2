@@ -8,7 +8,7 @@ GitHub: da1238
 
 Heroku Graphql URL:  http://cis411lab2-da1238.herokuapp.com/graphql
 
-![alt text](https://github.com/da1238/cis411_lab2/labreports/Screen_Shot_2018-11-26_at_2.58.39_PM.png?)
+![alt text](https://github.com/da1238/cis411_lab2/blob/master/labreports/Screen%20Shot%202018-11-26%20at%202.58.39%20PM.png)
 
 ## Questions
 
