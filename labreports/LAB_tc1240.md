@@ -12,7 +12,7 @@ GitHub: tc1240(https://github.com/tc1240)
 ## Delivered Content
 
 1. Running Heroku app is here: ```http://cis411lab2-tc1240.herokuapp.com/graphql```
-2. ![Image of Successful build](https://github.com/tc1240/cis411_lab2/blob/master/assets/CircleCiandHerokuBuild.JPG)
+2. Image of Successful build ![Image of Successful build](https://github.com/tc1240/cis411_lab2/blob/master/assets/CircleCiandHerokuBuild.JPG)
 
 ## Answered Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
