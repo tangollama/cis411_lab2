@@ -13,7 +13,7 @@ I was unable to get the app up and running, the command $git push heroku master 
 This is the error, "failed to push some refs to 'https://git.heroku.com/cis411lab2-nik-sloop.git'"  
 
 Screenshot:
-![alt text](C:\Users\njslo\OneDrive\Pictures\circleCI.png)
+![Screenshot of CircleCI](https://github.com/nik-sloop/cis411_lab2/blob/master/labreports/CircleCI.PNG)
 5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
 6. Answer the questions below.
 7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
