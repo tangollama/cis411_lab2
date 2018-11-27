@@ -20,6 +20,6 @@ GitHub: [wd1168](https://github.com/wd1168)
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?    
-Ans: With a containerized version, developers do not need to rely on a single machine for development and presentation. 
+  Ans: With a containerized version, developers do not need to rely on a single machine for development and presentation. 
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
-Ans: Involving a CI enables developers to more actively monitor their project. CI offers a more visually pleasing version control. In addition, CI is able to communicate whether and update is working within the site or not, thus providing feedback to the developer at a faster rate.
+  Ans: Involving a CI enables developers to more actively monitor their project. CI offers a more visually pleasing version control. In     addition, CI is able to communicate whether and update is working within the site or not, thus providing feedback to the developer at a   faster rate.
