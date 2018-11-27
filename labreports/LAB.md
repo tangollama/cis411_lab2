@@ -5,7 +5,7 @@ Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](http
 
 Name: Nik Sloop
 
-GitHub: Nik-Sloop(https://github.com/nik-sloop)
+GitHub: [Nik-Sloop](https://github.com/nik-sloop)
 
 # Required Content
 
