@@ -189,4 +189,9 @@ Heroku Build Screenshot
 # Step 6: Reflection / Feedback
 Complete the feedback section of the Lab report with responses to the following.
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+If for some reason you needed to access the application on a different machine, it would still work since the containerized version can
+share the same OS kernel as the host system. This also means you won't have to worry about dependencies and will have less installation issues.
+Also, due to the rapid nature of containers, you can also deploy changes to code and see results in real time, instead of having to restart and re-build
+an application that you are working on.
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+The CI solution allows us to continuously push updates to Heroku, so if a change is made and pushed to GitHub, CircleCI will automatically rebuild the project with the new changes included. With the CircleCI service in place we won't have to manually launch the app in heroku each time also.
