@@ -1,1 +1,0 @@
-http://em1404.herokuapp.com/graphql
