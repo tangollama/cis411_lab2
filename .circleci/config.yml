@@ -21,9 +21,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-<<<<<<< HEAD
-      - run: yarn test
-=======
       - run: yarn test
       
   deploy:
@@ -47,4 +44,3 @@ workflows:
           filters:
             branches:
               only: master
->>>>>>> ffe583fce01d6c1ab01056e5421fd70df3379cdd
