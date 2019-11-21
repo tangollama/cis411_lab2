@@ -26,6 +26,6 @@ Being able to use the application without spinning it up first is good. Instead 
 
 It helps to check if problems are occuring or not. When you are building an application with many different developers pushing to the same repository, it can become cluttered for what is actually working and what is not. Being able to have an application automate that process is very beneficial to have, instead of manually trying to find which commit-push combo broke the application. 
 
-![GraphQL on Heroku](https://drive.google.com/file/d/1E3TPAzusJV-BpVVVkiIB3bMJXcnSJPJh/view?usp=sharing "GraphQL on Heroku")
+![GraphQL on Heroku](../assets/GraphQL_on_Heroku.png "GraphQL on Heroku")
 
-![CircleCI build check](https://drive.google.com/file/d/1872og9zx-nVkrfkCNYLmFWjs7fs9kjlq/view?usp=sharing "CircleCI build check")
+![CircleCI build check](../assets/circleci_lab2.png "CircleCI build check")
