@@ -28,4 +28,4 @@ It helps to check if problems are occuring or not. When you are building an appl
 
 ![GraphQL on Heroku](../assets/GraphQL_on_Heroku.png "GraphQL on Heroku")
 
-![CircleCI build check](../assets/circleci_lab2.png "CircleCI build check")
+![CircleCI build check](../assets/circleci_lab1.png "CircleCI build check")
