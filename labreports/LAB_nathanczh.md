@@ -5,7 +5,7 @@ Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](http
 
 Name: YOUR NAME
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)
+GitHub: [nathanczh](https://github.com/nathanczh)
 
 # Required Content
 
@@ -14,9 +14,17 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)
 3. Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
 4. Write the URL of your running Heroku app here: ```ex: http://[cis411lab2-tangollama.herokuapp.com/graphql```
 5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
+
+![Screenshot](https://raw.githubusercontent.com/nathanczh/cis411_lab2/master/assets/img.png)
+
 6. Answer the questions below.
 7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+
+Because the Docker container helps with keeping everything standard, making it easier to scale and to re-deploy applications.
+
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+
+CircleCI provides continuous monitoring, something Heroku does not do by default.
