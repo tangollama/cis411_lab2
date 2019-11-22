@@ -15,6 +15,10 @@ GitHub: [My Lab2 Repository](https://github.com/hz1165/cis411_lab2)
 
 ## Questions
 **1.Why would a containerized version of an application be beneficial if you can run the application locally already?**
-    A containerized version of an application would eliminate the chance of having errors when multiple people are using machines with different configs working on the same project.
+
+A containerized version of an application would eliminate the chance of having errors when multiple people are using machines with different configs working on the same project.
+
+
 **2.If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?**
-    CI solutiou like CircleCI would test to see if the build will be successful or not before actually deploying the project.
+
+CI solutiou like CircleCI would test to see if the build will be successful or not before actually deploying the project.
