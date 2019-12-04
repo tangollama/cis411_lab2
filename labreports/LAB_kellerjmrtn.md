@@ -5,7 +5,7 @@ Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](http
 
 Name: YOUR NAME
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)
+GitHub: [kellerjmrtn](https://github.com/kellerjmrtn)
 
 # Required Content
 
