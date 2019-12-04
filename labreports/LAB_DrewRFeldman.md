@@ -33,12 +33,12 @@
    5. Embed *using markdown* a screenshot of your successful build and deployment to Heroku of your project.
 
       Terminal Success
-
-      ![Capture]https://github.com/DrewRFeldman/cis411_lab2/blob/master/labreports/Capture.PNG
-
+    ![capture](capture.png)
+    
       CircleCI Success (after many attempts)
-   
-      ![Capture]https://github.com/DrewRFeldman/cis411_lab2/blob/master/labreports/Capture2.PNG
+    ![capture2](capture2.png)
+
+
    
    6. Answer the questions below.
    
