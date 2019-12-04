@@ -34,11 +34,11 @@
 
       Terminal Success
 
-      ![Capture]https://github.com/DrewRFeldman/cis411_lab2/blob/master/labreports/capture.png
+      ![Capture]https://github.com/DrewRFeldman/cis411_lab2/blob/master/labreports/Capture.PNG
 
       CircleCI Success (after many attempts)
    
-      ![Capture]https://github.com/DrewRFeldman/cis411_lab2/blob/master/labreports/capture2.png
+      ![Capture]https://github.com/DrewRFeldman/cis411_lab2/blob/master/labreports/Capture2.PNG
    
    6. Answer the questions below.
    
