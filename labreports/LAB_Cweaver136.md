@@ -8,18 +8,19 @@ Name: Caleb Weaver
 GitHub: [Cweaver136](https://github.com/Cweaver136)
 
 # Required Content
+URL of your running Heroku app: ```ex: https://cis411lab2-cweaver136.herokuapp.com/graphql```
 
-1. Generate a markdown file in the labreports directoy named LAB_[GITHUB HANDLE].md. Write your lab report there.
-2. Create the directory ```./circleci``` and the file ```.circleci/config.yml``` in your project and push that change to your GitHub repository.
-3. Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
-4. Write the URL of your running Heroku app here: ```ex: https://cis411lab2-cweaver136.herokuapp.com/graphql```
-5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
+Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
     
-    ![Command Terminal deploying the project](../assets/cmd_heroku) "Terminal")
-    ![Graphql view of our project](../assets/web_heroku) "Graphql")
-6. Answer the questions below.
-7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
+![Command Terminal deploying the project](../assets/cmd_heroku.png "Terminal")
+![Graphql view of our project](../assets/web_heroku.png "Graphql")
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+
+
+    > Using a container allows anybody from any machine to run your code. They don'y have to worry about setting up any config stuff, they can just run it straight up. While you can still run in locally, that's only on your machine. If you use a container, you can include other people in your testing and development more easily.
+
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+
+    > CircleCi allows us to detect any problems with our code before it even get to Heroku. It limits errors and help us write cleaner code.
