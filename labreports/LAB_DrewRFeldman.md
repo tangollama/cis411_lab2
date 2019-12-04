@@ -34,11 +34,11 @@
 
       Terminal Success
       
-   ![Capture](Capture.png)
+   ![Capture](Capture.PNG)
     
       CircleCI Success (after many attempts)
       
-   ![Capture2](Capture2.png)
+   ![Capture2](Capture2.PNG)
 
 
    
