@@ -33,10 +33,12 @@
    5. Embed *using markdown* a screenshot of your successful build and deployment to Heroku of your project.
 
       Terminal Success
-    ![capture](capture.png)
+      
+   ![Capture](Capture.png)
     
       CircleCI Success (after many attempts)
-    ![capture2](capture2.png)
+      
+   ![Capture2](Capture2.png)
 
 
    
