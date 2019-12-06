@@ -17,7 +17,7 @@ GitHub: [tran1996](https://github.com/tran1996)
 4. Write the URL of your running Heroku app here: https://cis411lab2-tran1996.herokuapp.com/graphql
 
 5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
-![alt text](https://github.com/tran1996/cis411_lab1/blob/master/labreports/heroku.png "Heroku")
+![alt text](https://github.com/tran1996/cis411_lab2/blob/master/labreports/heroku.png "Heroku")
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
