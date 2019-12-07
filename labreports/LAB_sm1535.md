@@ -32,9 +32,9 @@
 
    5. Embed *using markdown* a screenshot of your successful build and deployment to Heroku of your project.
 
-      ![Capture]https://github.com/sm1535/cis411_lab2/tree/master/labreports/capture.PNG
+      ![Capture]https://github.com/sm1535/cis411_lab2/tree/master/labreports/Capture.PNG
 
-      ![Capture]https://github.com/sm1535/cis411_lab2/tree/master/labreports/capture2.PNG
+      ![Capture]https://github.com/sm1535/cis411_lab2/tree/master/labreports/Capture2.PNG
 
    6. Answer the questions below.
    
