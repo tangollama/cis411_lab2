@@ -1,4 +1,4 @@
-# Lab Report Template for CIS411_Lab2
+# Lab Report for CIS411_Lab2
 Course: Messiah College CIS 411, Fall 2019
 
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)
@@ -21,7 +21,7 @@ GitHub: [Leanne-Weaver](https://github.com/Leanne-Weaver)
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?<br>
-Putting my application in a container will allow reliable and efficient transport of my application to other software environments. This will mitigate the headaches and errors that can be caused by slight discrepancies between the application's interactions with infrastructures of differing software environments.
+Putting my application in a container will allow reliable and efficient transport of my application to other software environments. This will mitigate the headaches and errors that can be caused by slight discrepancies between the application's interactions with infrastructures of differing software environments.<br>
 
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?<br>
-The main benefit provided by CircleCI is that it tests code committed to GitHub. Validated code will be pushed, but code that fails the tests and is deemed as buggy will be rejected. This can help us detect _where_ the breakdown occurs (by looking only at the files in the rejected commit), as well as preserve the integrity of the functionality of the code that is already pushed.
+The main benefit provided by CircleCI is that it tests code committed to GitHub. Validated code will be pushed, but code that fails the tests and is deemed as buggy will be rejected. This can help us detect _where_ the breakdown occurs (by looking only at the files in the rejected commit), as well as preserve the integrity of the functionality of the code that is already pushed.<br>
