@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:  
     docker:
-      - image: circleci/node:11
+      - image: circleci/node:10
     steps:
       - checkout
 
@@ -19,13 +19,11 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+
       # run tests!
       - run: yarn test
-      
-      
-      
- deploy:
+
+  deploy:
     docker:
       - image: buildpack-deps:trusty
     steps:
@@ -44,4 +42,4 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: master 
