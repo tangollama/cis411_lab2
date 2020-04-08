@@ -25,3 +25,7 @@ Altogether, using a container allows the DevOps team to control the dependencies
 
 
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+
+CircleCi is used for continuous integration, meaning all members of DevOps publish their code to CircleCI prior to it  going to continous deployment in Heroku. By doing this CircleCi is able to run tests on the published code making sure that it  is error free and deployed correctly to our Heroku container.  With continuous integration in place we are also able to commit code more often all while having a smaller backlog.
+
+
