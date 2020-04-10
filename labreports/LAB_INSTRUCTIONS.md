@@ -144,7 +144,7 @@ You should see quite a bit of output as the application builds itself and deploy
 ```
 http://[GITHUB_HANDLE].herokuapp.com/graphql
 ```
-4. **Include this URL in your lab report.**
+4. http://cis411lab2-samgulinello.herokuapp.com/graphql
 
 # Step 5: Configure CircleCI for CD to Heroku
 
