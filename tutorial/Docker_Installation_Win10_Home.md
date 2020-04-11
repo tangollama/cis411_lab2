@@ -13,7 +13,7 @@ Sources: [hessi9's post](https://forums.docker.com/t/installing-docker-on-window
 # Step 1: Install Hyper-V and Container
 1. Save and close any open documents or projects
    * Your computer will restart multiple times throughout this installation
-1. Download [hyperv.bat](#) and [container.bat](#)
+1. Download [hyperv.bat](hyperv.bat) and [containers.bat](containers.bat)
    * Put them in an easyily accessible file
    * These files are Windows Batch files. They will install Windows Components necessary to make Docker run.
    * If you get a warning from **Windows Smartscreen**, click "More info" and then "Run anyway." This is your computer recognizing these files as downloaded from the internet and being cautious about running them.
@@ -50,7 +50,7 @@ Sources: [hessi9's post](https://forums.docker.com/t/installing-docker-on-window
 1. If you haven't already, download the Docker [installer](https://www.docker.com/products/docker-desktop)
 1. Run the installer as you would any other installer
    * The default settings are fine
-   * If you encounter any errors that reference "Hyper-V" or "Container" as missing, you might have missed something in Step 1. Go back and check.
+   * If you encounter any errors that reference "Hyper-V" or "Containers" as missing, you might have missed something in Step 1. Go back and check.
    * If you encounter any errors that reference how you need Windows Pro, you might have missed something in Step 2. Go back and check.
 1. The installer will notify you when it has installed successfully
    * You are almost done!
