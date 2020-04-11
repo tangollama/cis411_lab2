@@ -5,7 +5,7 @@ Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](http
 
 Name: Belosan Jekale
 
-GitHub: [YOUR_HANDLE](https://github.com/belosanj)
+GitHub: [belosanj](https://github.com/belosanj)
 
 # Required Content
 
