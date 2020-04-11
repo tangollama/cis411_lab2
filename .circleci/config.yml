@@ -31,7 +31,27 @@ jobs:
           - run:
               name: Deploy Master to Heroku
               command: |
-                git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+                git push https://heroku: deploy:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:9301f374-aea9-4cab-b65d-913fa3450109@git.heroku.com/cis411lab2-jostonchan.git master
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master@git.heroku.com/$HEROKU_APP_NAME.git master
     
     workflows:
       version: 2
