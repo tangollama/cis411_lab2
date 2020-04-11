@@ -21,9 +21,18 @@ GitHub: [JostonChan](https://github.com/JostonChan)
 ![Heroku.png](image/Heroku.png)
 
 5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
+![HerokuSuccess.png](image/HerokuSuccess.png)
+
 6. Answer the questions below.
 7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+
+A containerized version of an application is more beneficial than running it locally because if we build more than one application,
+the container isolates an application from the host system and from other applications. Not only that, a container provides a consistent environment that allows developers to spend less time debugging the application and more time on creating new functionalities for its users.
+
+
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+
+CircleCI provides continuous integration to Heroku. While doing so, CircleCI test codes that we committed and deem whether the codes are failures or success. If the codes fails, CircleCi prevent the deployment to Heroku. Thus, this helps enhance the integrity of our code and pinpoint errors. 
