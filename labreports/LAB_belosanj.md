@@ -1,11 +1,11 @@
 # Lab Report Template for CIS411_Lab2
-Course: Messiah College CIS 411, Fall 2018
+Course: Messiah College CIS 411, Spring 2020
 
 Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)
 
-Name: YOUR NAME
+Name: Belosan Jekale
 
-GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)
+GitHub: [YOUR_HANDLE](https://github.com/belosanj)
 
 # Required Content
 
