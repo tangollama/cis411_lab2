@@ -14,7 +14,13 @@ Sources: [hessi9's post](https://forums.docker.com/t/installing-docker-on-window
 1. Save and close any open documents or projects
    * Your computer will restart multiple times throughout this installation
 1. Download [hyperv.bat](hyperv.bat) and [containers.bat](containers.bat)
-   * Put them in an easyily accessible file
+   * Instructions for downloading:
+      1. Follow one of the links above
+      1. Click "Raw" on the right side of the page
+      1. On the page that appears, right-click and "Save Page As..."
+      1. In the dialog that appeas, navigate to your desired folder and add **.bat** to the end of the file name
+      1. Save the file and repeat the process for the other file
+   * Put them in an easily accessible folder
    * These files are Windows Batch files. They will install Windows Components necessary to make Docker run.
    * If you get a warning from **Windows Smartscreen**, click "More info" and then "Run anyway." This is your computer recognizing these files as downloaded from the internet and being cautious about running them.
 1. Right-click on the **hyperv.bat** and select "Run as administrator"
