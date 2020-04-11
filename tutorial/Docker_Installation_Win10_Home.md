@@ -3,7 +3,7 @@ Written by Tanner Stern<br>
 GitHub: [tannerstern](https://github.com/tannerstern/)<br>
 Last updated: 04/07/2020
 
-Sources: [hessi9's post](https://forums.docker.com/t/installing-docker-on-windows-10-home/11722/25) and [mapk's post](https://forums.docker.com/t/installing-docker-on-windows-10-home/11722/29) on the [Installing Docker on Windows 10 Home disucssion](https://forums.docker.com/t/installing-docker-on-windows-10-home/11722/)
+Sources: [hessi9's post](https://forums.docker.com/t/installing-docker-on-windows-10-home/11722/25) and [mapk's post](https://forums.docker.com/t/installing-docker-on-windows-10-home/11722/29) on the [Installing Docker on Windows 10 Home discussion](https://forums.docker.com/t/installing-docker-on-windows-10-home/11722/)
 
 # Pre-Installation Notes
 * Follow these instructions **in order** because the order matters
@@ -18,7 +18,7 @@ Sources: [hessi9's post](https://forums.docker.com/t/installing-docker-on-window
       1. Follow one of the links above
       1. Click "Raw" on the right side of the page
       1. On the page that appears, right-click and "Save Page As..."
-      1. In the dialog that appeas, navigate to your desired folder and add **.bat** to the end of the file name
+      1. In the dialog that appears, navigate to your desired folder and add **.bat** to the end of the file name
       1. Save the file and repeat the process for the other file
    * Put them in an easily accessible folder
    * These files are Windows Batch files. They will install Windows Components necessary to make Docker run.
