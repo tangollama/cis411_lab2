@@ -19,4 +19,6 @@ GitHub: [Willnew98](https://github.com/Willne98)
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+* The biggest benefit to having a containerized version of an application is to ease the process of testing. Running the application locally to test can get cluttered and hectic. With Docker, you're able to containerize everything and build more complex applications. Docker also allows the ability to easily fix anything you might have broken, no matter how big.
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+* Heroku has made deployment so much easier for developers. But, CircleCI or some other continuous integration is needed. This allows for easy deployment, and then that code is put through the CircleCI delivery pipeline. All of the tests will run, and only if it passes, will it then be pushed to Heroku. CircleCI acts almost like a fact checker before going to Heroku with possibly buggy code.
