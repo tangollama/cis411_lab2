@@ -145,6 +145,7 @@ You should see quite a bit of output as the application builds itself and deploy
 http://[GITHUB_HANDLE].herokuapp.com/graphql
 ```
 4. **Include this URL in your lab report.**
+https://cis411lab2-gagesapp-rahme.herokuapp.com/
 
 # Step 5: Configure CircleCI for CD to Heroku
 
@@ -208,5 +209,10 @@ workflows:
 
 # Step 6: Reflection / Feedback
 Complete the feedback section of the Lab report with responses to the following.
-1. Why would a containerized version of an application be beneficial if you can run the application locally already?
-2. If we have the ability to publish directly to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+1. Less overhead. Containers require less system resources than traditional or hardware virtual machine environments because they don’t include operating system images.
+Increased portability. Applications running in containers can be deployed easily to multiple different operating systems and hardware platforms.
+More consistent operation. DevOps teams know applications in containers will run the same, regardless of where they are deployed.
+Greater efficiency. Containers allow applications to be more rapidly deployed, patched, or scaled.
+Better application development. Containers support agile and DevOps efforts to accelerate development, test, and production cycles.
+source -https://www.netapp.com/us/info/what-are-containers.aspx
+2. It helps us to know hwat went wrong if anything and where. It will also highlight were in the code it stopped building etc. It makes troubleshooting and deployment easier. If something breaks you can quickly find exactly what version you need to roll back to
