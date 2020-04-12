@@ -21,4 +21,6 @@ GitHub: [lukemeads3](https://github.com/YOUR_HANDLE)
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+Containers require less resources and computing power than a traditional virtual machine. Another advantage is portability, which means that you can access it through the cloud or different platforms. There is also an improved secruity by isolating applications from each other. 
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+Involving a CI solution helps the developer troubleshoot what went wrong and where. It highlights where in the code broke it. When something breaks you can roll back and fix it.
