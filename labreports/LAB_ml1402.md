@@ -17,6 +17,8 @@ GitHub: [YOUR_HANDLE](https://github.com/YOUR_HANDLE)
 6. Answer the questions below.
 7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
 
+![Successful deployment picture](Successful.png)
+
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
 ~~~
