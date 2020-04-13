@@ -16,7 +16,7 @@ GitHub: [eddiedaniel](https://github.com/eddiedaniel)
 http://[cis411lab2-eddiedaniel.herokuapp.com/graphql
 
 5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
-<img src="circleci.png">
+<img src="circleci.jpg">
 6. Answer the questions below.
 7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
 
