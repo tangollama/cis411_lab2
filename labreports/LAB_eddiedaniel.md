@@ -23,3 +23,5 @@ A containerized version of an application would be more benficial than an applic
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
 
 It allows us to see if specifc action is causing an erro at some point so you can instantly see if its working or not. If things run smootlhy each time then you know exactly where you are in the process.
+
+URL:http://eddiedaniel.herokuapp.com/graphql
