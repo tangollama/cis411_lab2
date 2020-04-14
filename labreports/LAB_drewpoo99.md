@@ -15,7 +15,7 @@ GitHub: [@drewpoo99](https://github.com/drewpoo99)
 [x] 4. Write the URL of your running Heroku app here: ```http://cis411lab2-drewpoo99.herokuapp.com/graphql```
 [ ]5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
 [ ]6. Answer the questions below.
-[ ]7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
+[x]7. Submit a Pull Request to cis411_lab2 and provide the URL of that Pull Request in Canvas as your URL submission.
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
