@@ -17,7 +17,7 @@ GitHub: [JostonChan](https://github.com/JostonChan)
 3. Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
 ![Docker.png](image/Docker.png)
 
-4. Write the URL of your running Heroku app here: ```http://jostonchan.herokuapp.com/graphql``` (Heroku does not allow capitalized letters so I can't my GitHub handle, `JostonChan`, so I use `jostonchan`.)
+4. Write the URL of your running Heroku app here: ```http://cis411lab2-jostonchan.herokuapp.com/graphql``` (Heroku does not allow capitalized letters so I can't my GitHub handle, `JostonChan`, so I use `jostonchan`.)
 ![Heroku.png](image/Heroku.png)
 
 5. Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.
@@ -33,4 +33,13 @@ A containerized version of an application is more beneficial than running it loc
 
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
 
-CircleCI provides continuous integration to Heroku. While doing so, CircleCI test codes that we committed and deem whether the codes are failures or success. If the codes fails, CircleCi prevent the deployment to Heroku. Thus, this helps enhance the integrity of our code and pinpoint errors. 
+CircleCI provides continuous integration and continuous deployment of a program. CircleCI test codes that we committed and deem whether the codes are failures or success. If the codes fails, CircleCi prevent the deployment of the program and will allow deployment if it is a success. This relieves developers of their stress of committing new codes to the program because CircleCI provides a layer of security testing. Thus, this helps ensure the integrity of a program and pinpoint errors. 
+
+## Error in Lab instructions:
+For the Heroku section, the URL should be 
+
+    http://cis411lab2-[GITHUB_HANDLE].herokuapp.com/graphql
+
+not 
+
+    http://[GITHUB_HANDLE].herokuapp.com/graphql
