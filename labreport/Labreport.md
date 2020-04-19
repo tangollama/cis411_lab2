@@ -2,7 +2,7 @@ Course: Messiah College CIS 411, Spring 2020<br/>
 Instructors: [Trevor Bunch](https://github.com/trevordbunch)<br/>
 Name: Matthew Coates<br/>
 GitHub: [slycatm2](https://github.com/slycatm2)<br/>
-Heroku App: https://cis411lab2-slycatm2.herokuapp.com/<br/>
+Heroku App: http://slycatm2.herokuapp.com/graphql<br/>
 1. Why would a containerized version of an application be 
 beneficial if you can run the application locally already?
 Containerized versions can use memory, CPU usage and storage more efficiently 
