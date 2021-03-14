@@ -1,11 +1,12 @@
-# Lab Report Template for CIS411_Lab2
-Course: Messiah College CIS 411, Fall 2018
-
-Instructors: [Joel Worrall](https://github.com/tangollama) & [Trevor Bunch](https://github.com/trevordbunch)
-
-Name: TREVOR BUNCH
-
-GitHub: [@trevordbunch](https://github.com/trevordbunch)
+# Lab Report: UX/UI
+___
+**Course:** CIS 411, Fall 2018  
+**Instructor(s):** [Trevor Bunch](https://github.com/trevordbunch)  
+**Name:** Trevor Bunch  
+**GitHub Handle:** [@trevordbunch](https://github.com/trevordbunch)  
+**Repository:** [https://github.com/trevordbunch/cis411_lab4_CD/](https://github.com/trevordbunch/cis411_lab4_CD/)  
+**Collaborators:** [Joel Worrall](https://github.com/tangollama/)
+___
 
 # Required Content
 
@@ -22,6 +23,9 @@ GitHub: [@trevordbunch](https://github.com/trevordbunch)
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
 > It is extremely difficult all developers to have an `identical` environment.  The docker container helps to isolate the environmental conditions and allows for consistent behavior.
 2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
-> CircleCI performs tests code at the point when it is committed.  It will can turn away commits that cause errors or fail tests, so that new commits do not breaks the overall system.  In my original CircleCI config - I had an older version of node specified... this was inconsistent with the dependencies and failed!
-
+> CircleCI performs tests code at the point when it is committed.  It will can turn away commits that cause errors or fail tests, so that new commits do not breaks the overall system.  In my original CircleCI config - I had an older version of node specified... this was inconsistent with the dependencies and failed!  
 ![CircleCI Proof](trevordbunch_lab2_02.png)
+3. Why would you use a container technology over a virtual machine(VM)?
+> Respond here...
+4. What are some alternatives to Docker for containerized deployments?
+> Respond here...

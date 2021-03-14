@@ -15,14 +15,15 @@ Lab reports will be submitted by
 1. If you don't have a GitHub account already, [create one](https://github.com/join). 
 2. [Install _git_](https://git-scm.com/downloads) on your development environment.
 3. Install a text editor or some sort of application for local development. Lately, I'm partial to [Visual Studio Code](https://code.visualstudio.com/) and my instructions assume it's use, but you're welcome to diviate. _Each one should choose their own sword, etc. etc._
-4. Install Docker on your development environment, either for [Mac](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/), or various Linux distributions.
+4. Install Docker on your development environment, either for [Mac](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/), or various Linux distributions.  
+> If you have Windows Home Edition, then you should following these [instructions](ex/Docker_Installation_Win10_Home.md) to navigate the system requirements.  
 5. [Signup for an account on Docker Hub](https://hub.docker.com/) and keep track of your username and password (You'll need that later).
 6. [Signup for a Heroku](https://signup.heroku.com) account (You'll need that later too).
 7. [Download and install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
 
 
 # Step 1: Fork and clone this repository
-1. After logging in, navigate to the [root](https://github.com/tangollama/cis411_lab2) of this repository.
+1. After logging in, navigate to the [root](https://github.com/trevordbunch/cis411_lab4_CD) of this repository.
 2. Fork this repository to your personal GitHub account (hint: read the page).
 3. Navigate to your forked repository in your GitHub account and copy the reference to your repository in from the <button>Clone or Download</button> button.
 4. Open the terminal or command line interface on your development machine, navigate to your chosen working directory, and execute the following command: 
@@ -32,7 +33,7 @@ Lab reports will be submitted by
 
 5. Navigate to that directory 
 ```
-> cd cis411_lab2
+> cd cis411_lab4_CD
 ```
 
 6. Run npm install and watch the magic happen.
@@ -48,10 +49,10 @@ Lab reports will be submitted by
 8. Verify that you can see the GraphiQL interface and shut down the server with the use of ```Ctrl+C``` in the command line window that is currently running the ```npm start``` command.
 
 # Step 2: Setup a Continuous Integration configuration
-1. [Signup for CircleCI](https://circleci.com/signup/) with your GitHub account.
-2. Login to CircleCI and add your project to your account (ex. https://circleci.com/add-projects/gh/[YOUR_GITHUB_HANDLE]) by clicking _Add Project_ and selecting your forked repository for cis411_lab2.
+1. [Login into CircleCI](https://circleci.com/vcs-authorize/) or [Sign up to CircleCI](https://circleci.com/signup/) with your GitHub account.
+2. Login to CircleCI and add your project to your account (ex. https://circleci.com/add-projects/gh/[YOUR_GITHUB_HANDLE]) by clicking _Add Project_ and selecting your forked repository for cis411_lab4_CD.
 3. Follow the setup instructions, including creating the .circleci directory and adding the content below to a config.yml file.
-![CircleCI setup](../assets/circleci_setup.png "CircleCI Setup")
+![CircleCI setup](assets/circleci_setup.png "CircleCI Setup")
 - Create a directory name .circleci in your project 
 ```
 > mkdir .circleci
@@ -84,7 +85,7 @@ jobs:
       # run tests!
       - run: yarn test
 ```
-4. Save and add the .circleci directory to your forked repository. **Note: these files must be present in your submitted pull request.**
+1. Save and add the .circleci directory to your forked repository. **Note: these files must be present in your submitted pull request.**
 ```
 > git add .circleci
 > git commit -m "something something something"
@@ -93,7 +94,7 @@ jobs:
 5. Verify that the current config file is correct and the project is building in CircleCI.
 
 # Step 3: Create a Dockerfile and run docker commands
-1. Create a file in the **root directory** of your repository called **Dockerfile**.
+1. Create a file in the **root directory** of your repository called **Dockerfile** (no file extension).
 2. Add the following content to that file and save it:
 ```
 FROM node:11
@@ -109,12 +110,13 @@ EXPOSE 4000
 > docker login
 ```
 4. Provide your Docker Hub username and password
-5. Build and run the Docker image using the following commands from _within_ the cis411_lab2 directory:
+5. Build and run the Docker image using the following commands from _within_ the cis411_lab4_CD directory:
 ```
-> docker build -t lab2 .
-> docker run -p 4000:4000 lab2 &
+> docker build -t lab4 .
+> docker run -p 4000:4000 lab4 &
 ```
-6. Navigate to http://localhost:4000/graphql and verify that you can access GraphiQL.
+> Tip: the period (`.`) at the end of the command is important!  
+6. Navigate to http://localhost:4000/graphql and verify that you can access GraphQL.
 7. Shutdown the docker container by running the following command: 
 ```
 > docker stop $(docker ps -aq)
@@ -127,7 +129,7 @@ EXPOSE 4000
 ```
 
 # Step 4: Setup a Heroku application
-There are _lots_ of solutions for providing a CD endpoint including AWS, Google Cloud, Asure, Digital Ocean, etc. For the purposes of this assignment, we're going to use **Heroku** for one reason: it's _relatively_ easy.
+There are _lots_ of solutions for providing a CD endpoint including AWS, Google Cloud, Azure, Digital Ocean, etc. For the purposes of this assignment, we're going to use **Heroku** for one reason: it's _relatively_ easy.
 
 1. Login to heroku through the CLI using the username and password you created when you signed up for an account.
 ```
@@ -135,8 +137,8 @@ There are _lots_ of solutions for providing a CD endpoint including AWS, Google 
 ```
 2. Initiate a Heroku app. This can be handled through [the user interface](http://heroku.com/deploy) or via the command line instructions below, replacing the [GITHUB_HANDLE] with your GitHub handle.
 ```
-> heroku apps:create cis411lab2-[GITHUB_HANDLE] -b heroku/nodejs
-> git push heroku master 
+> heroku apps:create cis411lab4-[GITHUB_HANDLE] -b heroku/nodejs
+> git push heroku main 
 ```
 You should see quite a bit of output as the application builds itself and deploys to Heroku.
 
@@ -167,13 +169,13 @@ Updated at:  Tue Nov 13 2018 23:53:14 GMT-0500 (Eastern Standard Time) (less tha
 ```
 Settings > Projects > [Click on the Gear icon in the far right corner of this project] > Environment Variables
 ```
-![Right side gear icon](../assets/ci_gear.png "gear icon")
+![Right side gear icon](assets/ci_gear.png "gear icon")
 
-3. Add the following two environment variables to CircleCI: HEROKU_API_KEY equal to the Token generated from the command above and HEROKU_APP_NAME equal to the name of your Heroku app: cis411lab2-[GITHUB_HANDLE].
-![HEROKU_APP_NAME](../assets/ci_app_name.png "HEROKU_APP_NAME")
-![HEROKU_API_KEY](../assets/ci_api_key.png "HEROKU_API_KEY")
+1. Add the following two environment variables to CircleCI: HEROKU_API_KEY equal to the Token generated from the command above and HEROKU_APP_NAME equal to the name of your Heroku app: cis411lab4-[GITHUB_HANDLE].
+![HEROKU_APP_NAME](assets/ci_app_name.png "HEROKU_APP_NAME")
+![HEROKU_API_KEY](assets/ci_api_key.png "HEROKU_API_KEY")
 
-4. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
+1. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
 ```
   deploy:
     docker:
@@ -181,9 +183,9 @@ Settings > Projects > [Click on the Gear icon in the far right corner of this pr
     steps:
       - checkout
       - run:
-          name: Deploy Master to Heroku
+          name: Deploy Main to Heroku
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
 
 workflows:
   version: 2
@@ -195,8 +197,10 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: main
 ```
+> **TIP:** The indentation is important to how CircleCI understands how to interpret the commands.  Notice that the deployment commands are only applied to the `main` branch.
+
 5. Commit and save those changes and push them to your GitHub repository.
 ```
 > git add *
@@ -204,9 +208,14 @@ workflows:
 > git push origin master
 ```
 6. Login to CircleCI and **take a screenshot of the successful build and deployment** of your application to Heroku.
-![Success](../assets/ci_success.png "Success")
+![Success](assets/ci_success.png "Success")
 
 # Step 6: Reflection / Feedback
-Complete the feedback section of the Lab report with responses to the following.
+Answer the following 4 questions in your [Lab Report](/labreports/LAB_Template.md): 
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
-2. If we have the ability to publish directly to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+3. Why would you use a container technology over a virtual machine(VM)?
+4. What are some alternatives to Docker for containerized deployments?
+
+# Step 7: Submit your work
+Complete a pull request to the source repository and use the PR URL to submit your assignment in canvas.
