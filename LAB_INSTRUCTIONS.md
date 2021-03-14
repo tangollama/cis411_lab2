@@ -210,6 +210,21 @@ workflows:
 6. Login to CircleCI and **take a screenshot of the successful build and deployment** of your application to Heroku.
 ![Success](assets/ci_success.png "Success")
 
+7. Open up your deployed application on Heroku and register your account using the following Graphql mutation:
+```
+mutation {
+  mutateAccount(input: {
+    email: "YOUR EMAIL"
+    name: "YOUR FULL NAME"
+    mutation: "add"
+  }) {
+    id
+    name
+    email
+  }
+}
+```
+
 # Step 6: Reflection / Feedback
 Answer the following 4 questions in your [Lab Report](/labreports/LAB_Template.md): 
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
