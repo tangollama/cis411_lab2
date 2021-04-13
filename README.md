@@ -21,6 +21,13 @@ Detailed instructions are [here](LAB_INSTRUCTIONS.md), and you are expected to c
 ## 3. Submissions
 You are expected to create a lab report as a markdown file under the labreports directory using the **LAB_[GITHUB Handle].md** naming convention in your forked repository.  After you have reviewed your work, then you should submit a `Pull Request` to this repository with your lab report and any accompanying images/files (e.g., required diagrams).  Add the `Pull Request` URL into the courseroom LMS (Canvas) for grading.
 
+## 4. Grading Guidelines
+The following elements have been incorporated into your assignment rubric.
+1. **Working CI/CD Pipeline:** There is a screenshot from CircleCI that shows both successful workflow steps.
+2. **Working App:** In addition to any screenshots, anyone can go to the deployed app URL and add an account.
+3. **Question Responses:** There are four questions at the end of the lab about container technology.  They are assessed for accuracy and completeness.  Distinguished (Full Marks) scores are reserved for responses that cite their sources.
+4. **Communication:**  The markdown file is written according to professional standards by choosing the appropriate markdown elements, links and embedded content.
+
 # Resources
 Lab Specific Help.
 - [Detailed instructions](LAB_INSTRUCTIONS.md)
