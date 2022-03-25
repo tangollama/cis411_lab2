@@ -5,7 +5,7 @@ ___
 **Name:** Michael Mourelatos  
 **GitHub Handle:** [MichaelMourelatos](https://github.com/MichaelMourelatos)  
 **Repository:** Your Forked Repository  
-**Collaborators:** 
+**Collaborators:** [Grace Schlauder](https://github.com/grace-schl)
 ___
 
 # Required Content
@@ -13,7 +13,10 @@ ___
 - [x] Generate a markdown file in the labreports directoy named LAB_[GITHUB HANDLE].md. Write your lab report there.
 - [x] Create the directory ```./circleci``` and the file ```.circleci/config.yml``` in your project and push that change to your GitHub repository.
 - [x] Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
-- [ ] Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project (with the circleci interface).  
+- [x] Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project (with the circleci interface).  
+
+**Successful Build**:
+![Successful Build](/Successful_Build_and_Deployment.png)
 
 [URL for Heroku app](http://cis411lab4-michaelmourelatos.herokuapp.com/graphql)
 
@@ -22,7 +25,7 @@ ___
 - [ ] Write the URL of your running Heroku app here (and leave the deployment up so that I can test it):  
 > Example: [http://cis411lab2-trevordbunch.herokuapp.com/graphql](http://cis411lab2-trevordbunch.herokuapp.com/graphql)  
 > ![Successful Test on Deployed URL](../ex/trevordbunch_lab2_01.png)
-- [ ] Answer the **4** questions below.
+- [x] Answer the **4** questions below.
 - [ ] Submit a Pull Request to cis411_lab4_CD and provide the URL of that Pull Request in Canvas as your URL submission.
 
 ## Questions
