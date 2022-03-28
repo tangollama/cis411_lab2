@@ -37,10 +37,26 @@ http://cis411lab4-glorkemh.herokuapp.com/graphql
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
+   
+This would allow the chance of someone working on the code  well without it affecting the live version, also the chance of a bug affecting the code is significally lower. 
+
+
+1. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
 > Respond here...
-2. If we have the ability to publish directory to Heroku, why involve a CI solution like CircleCI? What benefit does it provide?
+
+CIrcleCi allows for a quick automanition of the process. It allows checks the code and makes sures that is correct before allowing it to pass to heroku. It helps the develepor work quicker and effienctly.
+
+
+1. Why would you use a container technology over a virtual machine(VM)?
 > Respond here...
-3. Why would you use a container technology over a virtual machine(VM)?
+
+Container technology is smaller and faster then a VM. It allows access to all resource in the Os
+
+
+
+1. What are some alternatives to Docker for containerized deployments?
 > Respond here...
-4. What are some alternatives to Docker for containerized deployments?
-> Respond here...
+
+LXC(linux), Artifactory Docker Registry, rkt (works with Kubernetes)
+
+Source: "7 Docker Alternatives And Other Types Of Container Tools | Jfrog". Jfrog, 2022, https://jfrog.com/knowledge-base/the-basics-7-alternatives-to-docker-all-in-one-solutions-and-standalone-container-tools/. Accessed 28 Mar 2022.
