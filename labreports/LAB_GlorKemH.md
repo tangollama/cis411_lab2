@@ -10,12 +10,20 @@ ___
 
 # Required Content
 
-- [ ] Generate a markdown file in the labreports directoy named LAB_[GITHUB HANDLE].md. Write your lab report there.
-- [ ] Create the directory ```./circleci``` and the file ```.circleci/config.yml``` in your project and push that change to your GitHub repository.
-- [ ] Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
-- [ ] Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project (with the circleci interface).  
+- [ X] Generate a markdown file in the labreports directoy named LAB_[GITHUB HANDLE].md. Write your lab report there.
+- [ X] Create the directory ```./circleci``` and the file ```.circleci/config.yml``` in your project and push that change to your GitHub repository.
+- [ X] Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
+- [ X] Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project (with the circleci interface).
+
+! [successful build](../assets/success.png)
+
+
 > Example: ![Successful Build](../ex/trevordbunch_lab2_02.png)
-- [ ] Write the URL of your running Heroku app here (and leave the deployment up so that I can test it):  
+- [X ] Write the URL of your running Heroku app here (and leave the deployment up so that I can test it):  
+
+http://cis411lab4-glorkemh.herokuapp.com/graphql
+
+
 > Example: [http://cis411lab2-trevordbunch.herokuapp.com/graphql](http://cis411lab2-trevordbunch.herokuapp.com/graphql)  
 > ![Successful Test on Deployed URL](../ex/trevordbunch_lab2_01.png)
 - [ ] Answer the **4** questions below.
