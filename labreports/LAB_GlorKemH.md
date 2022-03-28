@@ -19,6 +19,8 @@ ___
 
 
 > Example: ![Successful Build](../ex/trevordbunch_lab2_02.png)
+
+
 - [X ] Write the URL of your running Heroku app here (and leave the deployment up so that I can test it):  
 
 http://cis411lab4-glorkemh.herokuapp.com/graphql
