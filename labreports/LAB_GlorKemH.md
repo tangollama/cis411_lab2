@@ -26,8 +26,14 @@ http://cis411lab4-glorkemh.herokuapp.com/graphql
 
 > Example: [http://cis411lab2-trevordbunch.herokuapp.com/graphql](http://cis411lab2-trevordbunch.herokuapp.com/graphql)  
 > ![Successful Test on Deployed URL](../ex/trevordbunch_lab2_01.png)
-- [ ] Answer the **4** questions below.
-- [ ] Submit a Pull Request to cis411_lab4_CD and provide the URL of that Pull Request in Canvas as your URL submission.
+
+![Successful Test on deployed URL ](../assets/lab1.png)
+
+
+
+
+- [ X] Answer the **4** questions below.
+- [ X] Submit a Pull Request to cis411_lab4_CD and provide the URL of that Pull Request in Canvas as your URL submission.
 
 ## Questions
 1. Why would a containerized version of an application be beneficial if you can run the application locally already?
