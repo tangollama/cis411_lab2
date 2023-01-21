@@ -9,7 +9,6 @@ The purpose of this lab is to get hands on experience working with Docker, Circl
 1. GitHub account
 2. Git is installed on your development machine.
 3. Text editor or other integrated development environment (IDE) for modifying code.  
-...
 4. You will install Docker (and need an account on Docker Hub) as part of this lab.
 5. You will install Heroku CLI (and setup a free account) as part of this lab.
 
