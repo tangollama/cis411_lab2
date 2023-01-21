@@ -6,3 +6,4 @@ newrelic.js
 newrelic_agent.log
 test.json
 package-lock.json
+keys
