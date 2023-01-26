@@ -7,3 +7,4 @@ newrelic_agent.log
 test.json
 package-lock.json
 keys
+google-cloud-sdk-2/*
