@@ -57,4 +57,4 @@ This content is provided under the `MIT` [license](LICENSE).
 # Credits
 Special thanks to Joel Worrall, aka [tangollama](https://github.com/tangollama), for co-developing this course and writing this lab.
 
-[Tanner Stern](https://github.com/tannerstern/) compiled a tutorial on how to install Docker on Windows Home Edition [(here)](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) and added the associated windows bat files.
+[Tanner Stern](https://github.com/tannerstern/) compiled a tutorial on how to install Docker on Windows Home Edition [(here)](ex/Docker_Installation_Win10_Home.md) and added the associated windows bat files.
