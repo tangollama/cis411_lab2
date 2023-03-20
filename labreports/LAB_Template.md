@@ -15,7 +15,7 @@ ___
 - [ ] Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
 - [ ] Write the URL of your app hosted on Heroku or other Cloud Provider here:  
 > Example: [http://cis411lab2-trevordbunch.herokuapp.com/graphql](http://cis411lab2-trevordbunch.herokuapp.com/graphql)
-- [ ] Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project.  
+- [ ] Embed _using markdown_ a screenshot of your successful build and deployment to Heroku or other Cloud Provider of your project.  
 > Example: ![Successful Build](../ex/trevordbunch_lab2_01.png)
 - [ ] Answer the **4** questions below.
 - [ ] Submit a Pull Request to cis411_lab4_CD and provide the URL of that Pull Request in Canvas as your URL submission.
