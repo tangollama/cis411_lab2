@@ -16,7 +16,7 @@ ___
 - [x] Write the URL of your app hosted on Heroku or other Cloud Provider here:  
 [https://cis411lab4-rt1252.herokuapp.com/](https://cis411lab4-rt1252.herokuapp.com/graphql)
 - [x] Embed _using markdown_ a screenshot of your successful deployed application to Heroku.  
-> ![Successful Build](../assets/GraphQL.png)
+> ![Successful Build](/assets/GraphQL.png)
 - [ ] Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project (with the circleci interface).  
 > Example: ![Successful Build](../ex/trevordbunch_lab2_02.png)
 - [ ] Answer the **4** questions below.
