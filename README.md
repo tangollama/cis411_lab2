@@ -27,6 +27,13 @@ You are expected to create a lab report as a markdown file under the `labreports
 - +50 points - Complete the Lab Instructions for Google Cloud Platform [Draft Instructions](LAB_INSTRUCTIONS_Google.md)
 - +100 points - Be the first (measured by successful PR) to add Lab Instructions for another Cloud Platform.
 
+## 4. Grading Guidelines
+The following elements have been incorporated into your assignment rubric.
+1. **Working CI/CD Pipeline:** There is a screenshot from CircleCI that shows both successful workflow steps.
+2. **Working App:** In addition to any screenshots, anyone can go to the deployed app URL and add an account.
+3. **Question Responses:** There are four questions at the end of the lab about container technology.  They are assessed for accuracy and completeness.  Distinguished (Full Marks) scores are reserved for responses that cite their sources.
+4. **Communication:**  The markdown file is written according to professional standards by choosing the appropriate markdown elements, links and embedded content.
+
 # Resources
 Lab Specific Help.
 - [Detailed instructions for Heroku](LAB_INSTRUCTIONS_Heroku.md)
@@ -56,4 +63,4 @@ This content is provided under the `MIT` [license](LICENSE).
 # Credits
 Special thanks to Joel Worrall, aka [tangollama](https://github.com/tangollama), for co-developing this course and writing this lab.
 
-[Tanner Stern](https://github.com/tannerstern/) compiled a tutorial on how to install Docker on Windows Home Edition [(here)](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) and added the associated windows bat files.
+[Tanner Stern](https://github.com/tannerstern/) compiled a tutorial on how to install Docker on Windows Home Edition [(here)](ex/Docker_Installation_Win10_Home.md) and added the associated windows bat files.

@@ -1,5 +1,5 @@
 # CIS 411 Lab 4: GitHub + Docker + CircleCI + Heroku
-The purpose of this lab is to get hands on experience working with Docker, CircleCI, and a Cloud Service Provider like Heroku to create a CI/CD pipeline. Though the lab is generally paint by numbers, the hands on experience with the tools is meant to prepare students to improvise on this relatively simple implementation as teams approach CIS 412.
+The purpose of this lab is to get hands on experience working with Docker, CircleCI, and a Cloud Service Provider like Heroku to create a CI/CD pipeline. Though the lab is generally paint by numbers, the hands on experience with the tools is meant to prepare students to improvise on this relatively simple implementation as teams approach CIS 471.
 
 ## Submitting work
 Lab reports will be submitted by 
@@ -8,8 +8,7 @@ Lab reports will be submitted by
 3. Providing the URL for that pull request in the Canvas/LMS platform
 
 * Throughout these instructions, you'll find that **items marked in bold text** reference content you are to submit in your lab report.
-* For the purposes of clear communication, you may base your lab report off of the template found in [LAB.md](LAB.md), but you're also free, welcome, and encouraged to get more creative.
-* If you are unfamiliar with markdown, I recommend checking [1000 places on the Interwebs](http://lmgtfy.com/?q=learn+markdown) that will help you close that gap.
+* For the purposes of clear communication, you may base your lab report off of the template found in [LAB_Template.md](/labreports/LAB_Template.md), but you're also free, welcome, and encouraged to get more creative.
 
 # Step 0: Installing appropriate tools / logins
 1. If you don't have a GitHub account already, [create one](https://github.com/join). 
@@ -47,6 +46,7 @@ Lab reports will be submitted by
 ``` 
 
 1. Verify that you can see the GraphQL interface and shut down the server with the use of ```Ctrl+C``` in the command line window that is currently running the ```npm start``` command.
+
 
 # Step 2: Setup a Continuous Integration configuration
 1. [Login into CircleCI](https://circleci.com/vcs-authorize/) or [Sign up to CircleCI](https://circleci.com/signup/) with your GitHub account.
