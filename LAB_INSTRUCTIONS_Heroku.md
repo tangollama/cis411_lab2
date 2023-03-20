@@ -3,7 +3,7 @@ The purpose of this lab is to get hands on experience working with Docker, Circl
 
 ## Submitting work
 Lab reports will be submitted by 
-1. Generating a markdown file in the labreports directory under the naming convention: **LAB_[GITHUB HANDLE].md**, 
+1. Generating a markdown file in the `labreports` directory under the naming convention: **LAB_[GITHUB HANDLE].md**, 
 2. Submitting a Pull Request to this repository that include your lab report as well as any accompanying images/files (there are diagrams required in the lab content), and 
 3. Providing the URL for that pull request in the Canvas/LMS platform
 
@@ -17,7 +17,7 @@ Lab reports will be submitted by
 4. Install Docker on your development environment, either for [Mac](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/), or various Linux distributions.  
 > If you have Windows Home Edition, then you should following these [instructions](ex/Docker_Installation_Win10_Home.md) to navigate the system requirements.  
 5. [Sign up for an account on Docker Hub](https://hub.docker.com/) and keep track of your username and password (You'll need that later).
-6. [Sign up for a Heroku](https://signup.heroku.com) account (You'll need that later too).
+6. [Sign up for a Heroku](https://signup.heroku.com) account.  Make sure that you get the Heroku for GitHub Students (https://www.heroku.com/github-students) or be prepared to pay.   (You'll need that later too).
 7. [Download and install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
 
 
@@ -45,7 +45,8 @@ Lab reports will be submitted by
 > npm start
 ``` 
 
-8. Verify that you can see the GraphQL interface and shut down the server with the use of ```Ctrl+C``` in the command line window that is currently running the ```npm start``` command.
+1. Verify that you can see the GraphQL interface and shut down the server with the use of ```Ctrl+C``` in the command line window that is currently running the ```npm start``` command.
+
 
 # Step 2: Setup a Continuous Integration configuration
 1. [Login into CircleCI](https://circleci.com/vcs-authorize/) or [Sign up to CircleCI](https://circleci.com/signup/) with your GitHub account.

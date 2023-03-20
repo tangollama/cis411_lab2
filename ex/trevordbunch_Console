@@ -28,6 +28,8 @@ Trevors-MBP:cis411_lab2 trevorbunch$ npm start
 Express GraphQL Server Now Running On localhost:4000/graphql
 ^C
 
+Comments submitted to Anne Mathews with CC to Devi Suberi (Advisor)
+
 Trevors-MBP:cis411_lab2 trevorbunch$ docker login
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
 Username: trevordbunch

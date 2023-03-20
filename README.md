@@ -9,17 +9,23 @@ The purpose of this lab is to get hands on experience working with Docker, Circl
 1. GitHub account
 2. Git is installed on your development machine.
 3. Text editor or other integrated development environment (IDE) for modifying code.  
-...
 4. You will install Docker (and need an account on Docker Hub) as part of this lab.
-5. You will install Heroku CLI (and setup a free account) as part of this lab.
+5. You will install Heroku CLI (and setup a student account with credits) as part of this lab.  (Other Cloud Platforms are allowed)
 
 ## 2. Lab Description
-This lab will build upon your prior experience using CircleCI in [lab 1](https://github.com/trevordbunch/cis411_lab1_CI) for the first two steps.  Step 3 will packaging the GraphQL application into a Docker container.  Step 4 will focus on setting up the Heroku deployment location, and Step 5 will guide you through setting up the CI/CD pipeline in CircleCI.  After the lab, you will need to respond to 4 questions about why container technology is useful in modern architectures.
+This lab will build upon your prior experience using CircleCI in [lab 1](https://github.com/trevordbunch/cis411_lab1_CI) for the first two steps.  Step 3 will packaging the GraphQL application into a Docker container.  Step 4 will focus on setting up the Heroku (or other Cloud Platform) deployment location, and Step 5 will guide you through setting up the CI/CD pipeline in CircleCI.  After the lab, you will need to respond to 4 questions about why container technology is useful in modern architectures.
 
-Detailed instructions are [here](LAB_INSTRUCTIONS.md), and you are expected to compile your findings into a labreport following this [template](labreports/LAB_TEMPLATE.md).
+Here are the Detailed instructions for executing this lab using [Heroku](LAB_INSTRUCTIONS_Heroku.md), and you are expected to compile your findings into a lab report following this [template](labreports/LAB_TEMPLATE.md).
+
+You are welcome to complete this lab using any Cloud Provider (AWS, Google Cloud, Azure, Digital Ocean, etc.).  If you choose this path - then I encourage you to consider the extra credit opportunity below.
 
 ## 3. Submissions
-You are expected to create a lab report as a markdown file under the labreports directory using the **LAB_[GITHUB Handle].md** naming convention in your forked repository.  After you have reviewed your work, then you should submit a `Pull Request` to this repository with your lab report and any accompanying images/files (e.g., required diagrams).  Add the `Pull Request` URL into the courseroom LMS (Canvas) for grading.
+You are expected to create a lab report as a markdown file under the `labreports` directory using the **LAB_[GITHUB Handle].md** naming convention in your forked repository.  After you have reviewed your work, then you should submit a `Pull Request` to this repository with your lab report and any accompanying images/files (e.g., required diagrams).  Add the `Pull Request` URL into the course room LMS (Canvas) for grading.
+
+# Extra Credit
+
+- +50 points - Complete the Lab Instructions for Google Cloud Platform [Draft Instructions](LAB_INSTRUCTIONS_Google.md)
+- +100 points - Be the first (measured by successful PR) to add Lab Instructions for another Cloud Platform.
 
 ## 4. Grading Guidelines
 The following elements have been incorporated into your assignment rubric.
@@ -30,7 +36,7 @@ The following elements have been incorporated into your assignment rubric.
 
 # Resources
 Lab Specific Help.
-- [Detailed instructions](LAB_INSTRUCTIONS.md)
+- [Detailed instructions for Heroku](LAB_INSTRUCTIONS_Heroku.md)
 - [Lab template](labreports/LAB_Template.md)
 - [HELP: Installing Docker on a Windows Home edition laptop](ex/Docker_Installation_Win10_Home.md)
 

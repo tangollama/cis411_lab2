@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tangollama/cis411_lab2.git"
+    "url": "git+https://github.com/trevordbunch/cis411_lab4_CD.git"
   },
   "keywords": [
     "git",
@@ -24,14 +24,13 @@
   "author": "Joel Worrall <joel@joelworrall.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tangollama/cis411_lab2/issues"
+    "url": "https://github.com/trevordbunch/cis411_lab4_CD/issues"
   },
-  "homepage": "https://github.com/tangollama/cis411_lab2#readme",
+  "homepage": "https://github.com/trevordbunch/cis411_lab4_CD#readme",
   "dependencies": {
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
     "graphql": "^14.0.2",
-    "heroku": "^7.18.7",
     "lokijs": "^1.5.5",
     "uuid": "^3.3.2"
   },
