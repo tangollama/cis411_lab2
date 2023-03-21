@@ -163,9 +163,13 @@ Make sure that you st
 Settings > Projects > [Click on the Gear icon in the far right corner of this project] > Environment Variables
 ```
 
-1. Add the following two environment variables to CircleCI: HEROKU_API_KEY equal to the token generated from the command above.
+4. Add the following two environment variables to CircleCI: OCEAN_API_KEY equal to the Token generated from the command above and OCEAN_APP_NAME equal to the name of your digital ocean app: cis411lab4-[GITHUB_HANDLE].
+![HEROKU_APP_NAME](assets/ci_app_name.png "HEROKU_APP_NAME")
+![HEROKU_API_KEY](assets/ci_api_key.png "HEROKU_API_KEY")
+   
+![api_key](assets/api_key.png)
 
-2. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
+5. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
 ```
   deploy:
     docker:
@@ -173,9 +177,9 @@ Settings > Projects > [Click on the Gear icon in the far right corner of this pr
     steps:
       - checkout
       - run:
-          name: Deploy Main to Heroku
+          name: Deploy Main to Digital Ocean
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
+            git push https://heroku:$OCEAN_API_KEY@git.OCEAN.com/$OCEAN_APP_NAME.git main
 
 workflows:
   version: 2
@@ -191,16 +195,16 @@ workflows:
 ```
 > **TIP:** The indentation is important to how CircleCI understands how to interpret the commands.  Notice that the deployment commands are only applied to the `main` branch.
 
-5. Commit and save those changes and push them to your GitHub repository.
+6. Commit and save those changes and push them to your GitHub repository.
 ```
 > git add *
 > git commit -m "Changes something something"
 > git push origin master
 ```
-6. Login to CircleCI and **take a screenshot of the successful build and deployment** of your application to Heroku.
-![Success](assets/ci_success.png "Success")
+7. Login to CircleCI and **take a screenshot of the successful build and deployment** of your application to Digital Ocean.
+![Success](assets/circleci2.png)
 
-7. Open up your deployed application on Heroku and register your account using the following Graphql mutation:
+8. Open up your deployed application on Digital Ocean and register your account using the following Graphql mutation:
 ```
 mutation {
   mutateAccount(input: {

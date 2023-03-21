@@ -14,11 +14,11 @@ ___
 - [x] Create the directory ```./circleci``` and the file ```.circleci/config.yml``` in your project and push that change to your GitHub repository.
 - [x] Create the file ```Dockerfile``` in the root of your project and include the contents of the file as described in the instructions. Push that change to your GitHub repository.
 - [x] Write the URL of your app hosted on Heroku or other Cloud Provider here:  
-[https://cis411lab4-rt1252.herokuapp.com/graphql](https://cis411lab4-rt1252.herokuapp.com/graphql)
+[https://lab4-lfanl.ondigitalocean.app/graphqll](https://lab4-lfanl.ondigitalocean.app/graphql)
 - [x] Embed _using markdown_ a screenshot of your successful deployed application to Heroku.  
-> ![Successful Build](/assets/GraphQL.png)
+> ![Successful Build](/assets/digital_ocean.png)
 - [x] Embed _using markdown_ a screenshot of your successful build and deployment to Heroku of your project (with the circleci interface).  
-> Example: ![Successful Build](/assets/circleci.png)
+> Example: ![Successful Build](/assets/circleci2.png)
 - [x] Answer the **4** questions below.
 - [x] Submit a Pull Request to cis411_lab4_CD and provide the URL of that Pull Request in Canvas as your URL submission.
 
@@ -31,5 +31,3 @@ ___
 > There are many reasons to use containers over virtual machines. Containers package everything it needs to run the application into a very small container, virtual machines on the other hand are very large and need gigabytes to be stored. You can run more containers on a single host than if you were using VMs which can help reduce hardware costs. In addition, containers also use fewer resources than VMs do this also increases efficiency and reduces costs. Lastly containers are faster and can be started and stopped much faster than VMs.
 4. What are some alternatives to Docker for containerized deployments?
 > The main competitor for Docker that comes to mind for me is Kubernetes, Kubernetes is useful for deploying containers at scale. It provides many features such as managing containers, auto scaling containers, rolling updates, and load balancing. A more different competitor is Podman which is a daemonless open source Linux tool that makes running Docker more lightweight.
-
-Note, I completed the extra credit please see LAB_INSTRUCTIONS_Digital_Ocean and LAB_rt1252_digital_ocean_extra_credit.md.
