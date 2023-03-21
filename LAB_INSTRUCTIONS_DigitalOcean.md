@@ -132,7 +132,6 @@ EXPOSE 4000
 Docker desktop is different than docker hub, you must push your image to your docker hub account. Do the following from git cli:
 1. Tag your image
   ```docker tag your-local-image your-docker-hub-username/repository-name:tag```<br>
-  
     Example
   ```docker tag lab4 rt1252/lab4:tag```
 2. Push to docker hub
@@ -148,7 +147,8 @@ There are _lots_ of solutions for providing a CD endpoint including AWS, Google 
 1. Login to Digital Ocean through the web interface and go to manage, apps, create app, docker hub, type in the repo (example: rt1252/lab4), enter 'tag' for tag, click next.
 2. Edit any setting such as name if you like.
 3. Wait for service to deploy.
-4. Click the live app button and append /graphql to the end. You will see graphql running!
+4. Click the live app button and append /graphql to the end. You will see graphql running!  
+![Live Application](assets/digitalOcean_success.png)  
 5. **Include this URL in your lab report.**
 
 # Step 6: Configure CircleCI for CD to Digital Ocean
@@ -165,7 +165,7 @@ Settings > Projects > [Click on the Gear icon in the far right corner of this pr
 ![HEROKU_APP_NAME](assets/ci_app_name.png "HEROKU_APP_NAME")
 ![HEROKU_API_KEY](assets/ci_api_key.png "HEROKU_API_KEY")
    
-![api_key](assets/api_key.png)
+![api_key](assets/digitalOcean_api_key.png)
 
 5. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
 ```
@@ -200,7 +200,7 @@ workflows:
 > git push origin master
 ```
 7. Login to CircleCI and **take a screenshot of the successful build and deployment** of your application to Digital Ocean.
-![Success](assets/circleci2.png)
+![Success](assets/digitalOcean_circleci2.png)
 
 8. Open up your deployed application on Digital Ocean and register your account using the following Graphql mutation:
 ```

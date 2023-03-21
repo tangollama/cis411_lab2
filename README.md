@@ -15,9 +15,13 @@ The purpose of this lab is to get hands on experience working with Docker, Circl
 ## 2. Lab Description
 This lab will build upon your prior experience using CircleCI in [lab 1](https://github.com/trevordbunch/cis411_lab1_CI) for the first two steps.  Step 3 will packaging the GraphQL application into a Docker container.  Step 4 will focus on setting up the Heroku (or other Cloud Platform) deployment location, and Step 5 will guide you through setting up the CI/CD pipeline in CircleCI.  After the lab, you will need to respond to 4 questions about why container technology is useful in modern architectures.
 
-Here are the Detailed instructions for executing this lab using [Heroku](LAB_INSTRUCTIONS_Heroku.md), and you are expected to compile your findings into a lab report following this [template](labreports/LAB_TEMPLATE.md).
+Here are the Detailed instructions for executing this lab using: 
+- [Heroku](LAB_INSTRUCTIONS_Heroku.md)
+- [Digital Ocean](LAB_INSTRUCTIONS_DigitalOcean.md)  
 
-You are welcome to complete this lab using any Cloud Provider (AWS, Google Cloud, Azure, Digital Ocean, etc.).  If you choose this path - then I encourage you to consider the extra credit opportunity below.
+You are expected to compile your findings into a lab report following this [template](labreports/LAB_TEMPLATE.md).
+
+You are welcome to complete this lab using any Cloud Provider (AWS, Google Cloud, Azure, etc.).  If you choose this path - then I encourage you to consider the extra credit opportunity below.
 
 ## 3. Submissions
 You are expected to create a lab report as a markdown file under the `labreports` directory using the **LAB_[GITHUB Handle].md** naming convention in your forked repository.  After you have reviewed your work, then you should submit a `Pull Request` to this repository with your lab report and any accompanying images/files (e.g., required diagrams).  Add the `Pull Request` URL into the course room LMS (Canvas) for grading.
@@ -57,6 +61,10 @@ Heroku Resources
 - [Heroku Account](https://signup.heroku.com)
 - [Heroku CLI Download](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
+Digital Ocean Resources (TBD)
+- [Digital Ocean Account](https://cloud.digitalocean.com/registrations/new)
+- ...
+
 # License
 This content is provided under the `MIT` [license](LICENSE).
 
@@ -64,3 +72,5 @@ This content is provided under the `MIT` [license](LICENSE).
 Special thanks to Joel Worrall, aka [tangollama](https://github.com/tangollama), for co-developing this course and writing this lab.
 
 [Tanner Stern](https://github.com/tannerstern/) compiled a tutorial on how to install Docker on Windows Home Edition [(here)](ex/Docker_Installation_Win10_Home.md) and added the associated windows bat files.
+
+[Ray Truex](https://github.com/rt1252) contributed instructions for [Digital Ocean](LAB_INSTRUCTIONS_DigitalOcean.md). 
