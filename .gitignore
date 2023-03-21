@@ -8,3 +8,4 @@ test.json
 package-lock.json
 keys
 google-cloud-sdk-2/*
+*.pem

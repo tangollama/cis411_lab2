@@ -18,6 +18,7 @@ This lab will build upon your prior experience using CircleCI in [lab 1](https:/
 Here are the Detailed instructions for executing this lab using: 
 - [Heroku](LAB_INSTRUCTIONS_Heroku.md)
 - [Digital Ocean](LAB_INSTRUCTIONS_DigitalOcean.md)  
+- [Amazon Web Services](LAB_INSTRUCTIONS_AWS.md)
 
 You are expected to compile your findings into a lab report following this [template](labreports/LAB_TEMPLATE.md).
 
@@ -61,9 +62,13 @@ Heroku Resources
 - [Heroku Account](https://signup.heroku.com)
 - [Heroku CLI Download](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
-Digital Ocean Resources (TBD)
+Digital Ocean Resources 
 - [Digital Ocean Account](https://cloud.digitalocean.com/registrations/new)
-- ...
+
+AWS Resources
+- [AWS Signup](https://portal.aws.amazon.com/billing/signup#/start/email)
+- [EC2 Dashboard](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Home:)
+- [EC2 FAQ](https://aws.amazon.com/ec2/faqs/)
 
 # License
 This content is provided under the `MIT` [license](LICENSE).
@@ -74,3 +79,5 @@ Special thanks to Joel Worrall, aka [tangollama](https://github.com/tangollama),
 [Tanner Stern](https://github.com/tannerstern/) compiled a tutorial on how to install Docker on Windows Home Edition [(here)](ex/Docker_Installation_Win10_Home.md) and added the associated windows bat files.
 
 [Ray Truex](https://github.com/rt1252) contributed instructions for [Digital Ocean](LAB_INSTRUCTIONS_DigitalOcean.md). 
+
+[Jeff Sinsel](https://github.com/jeffsinsel) contributed instructions for [AWS](LAB_INSTRUCTIONS_AWS.md). 
