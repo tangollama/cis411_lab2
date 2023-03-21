@@ -145,8 +145,6 @@ Docker desktop is different than docker hub, you must push your image to your do
 # Step 5: Setup a Digital Ocean application
 There are _lots_ of solutions for providing a CD endpoint including AWS, Google Cloud, Azure, Digital Ocean, etc. For the purposes of this assignment, we're going to use **Digital Ocean** for one reason: it's _relatively_ easy. They provide $200 free credits which must be used in 60 days.
 
-Make sure that you st
-
 1. Login to Digital Ocean through the web interface and go to manage, apps, create app, docker hub, type in the repo (example: rt1252/lab4), enter 'tag' for tag, click next.
 2. Edit any setting such as name if you like.
 3. Wait for service to deploy.
