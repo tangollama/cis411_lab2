@@ -28,9 +28,30 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Deploy Main to Digital Ocean
+          name: Install dependencies
           command: |
-            git push https://heroku:$OCEAN_API_KEY@git.OCEAN.com/$OCEAN_APP_NAME.git main
+            sudo apt-get update
+            sudo apt-get install -y python3-pip
+            pip3 install awscli
+            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+      - run:
+          name: Install doctl
+          command: |
+            wget https://github.com/digitalocean/doctl/releases/download/v1.64.0/doctl-1.64.0-linux-amd64.tar.gz
+            tar xf doctl-1.64.0-linux-amd64.tar.gz
+            sudo mv doctl /usr/local/bin
+            rm doctl-1.64.0-linux-amd64.tar.gz
+      - run:
+          name: Authenticate with DigitalOcean
+          command: |
+            doctl auth init --access-token $OCEAN_API_KEY
+            doctl kubernetes cluster kubeconfig save mycluster
+            kubectl config use-context do-myapp
+      - run:
+          name: Deploy to DigitalOcean
+          command: |
+            kubectl apply -f k8s
 
 workflows:
   version: 2

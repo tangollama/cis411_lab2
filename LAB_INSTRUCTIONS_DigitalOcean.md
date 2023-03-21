@@ -17,8 +17,7 @@ Lab reports will be submitted by
 4. Install Docker on your development environment, either for [Mac](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/), or various Linux distributions.  
 > If you have Windows Home Edition, then you should following these [instructions](ex/Docker_Installation_Win10_Home.md) to navigate the system requirements.  
 5. [Sign up for an account on Docker Hub](https://hub.docker.com/) and keep track of your username and password (You'll need that later).
-6. [Sign up for a Heroku](https://signup.heroku.com) account.  Make sure that you get the Heroku for GitHub Students (https://www.heroku.com/github-students) or be prepared to pay.   (You'll need that later too).
-7. [Download and install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
+6. [Sign up for a Digital Ocean](https://www.digitalocean.com/) account. You will need to add a card to get the free credits. 
 
 
 # Step 1: Fork and clone this repository
@@ -131,7 +130,7 @@ EXPOSE 4000
 # Step 4: Push docker desktop file to docker hub
 Docker desktop is different than docker hub, you must push your image to your docker hub account. Do the following from git cli:
 1. Tag your image
-  ```docker tag your-local-image your-docker-hub-username/repository-name:tag```<br>
+  ```docker tag your-local-image your-docker-hub-username/repository-name:tag```<br> 
     Example
   ```docker tag lab4 rt1252/lab4:tag```
 2. Push to docker hub
@@ -140,44 +139,68 @@ Docker desktop is different than docker hub, you must push your image to your do
    ```docker push rt1252/lab4:tag```
 3. Go to [docker hub](https://hub.docker.com/repositories) and view your repo.
 
-
 # Step 5: Setup a Digital Ocean application
 There are _lots_ of solutions for providing a CD endpoint including AWS, Google Cloud, Azure, Digital Ocean, etc. For the purposes of this assignment, we're going to use **Digital Ocean** for one reason: it's _relatively_ easy. They provide $200 free credits which must be used in 60 days.
 
-1. Login to Digital Ocean through the web interface and go to manage, apps, create app, docker hub, type in the repo (example: rt1252/lab4), enter 'tag' for tag, click next.
-2. Edit any setting such as name if you like.
-3. Wait for service to deploy.
-4. Click the live app button and append /graphql to the end. You will see graphql running!  
-![Live Application](assets/digitalOcean_success.png)  
-5. **Include this URL in your lab report.**
+1. Login to [Digital Ocean](https://cloud.digitalocean.com/projects?i=49cc11) through the web interface and click create then click app.
+![Create app](/assets/do1.png)
+2. Select the docker hub option and enter your repo copying the name from the command above. Enter 'tag' for tag. You should also [see your docker hub repo here](https://hub.docker.com/).
+![Select docker hub](/assets/do2.png)
+3. Click next accepting the default settings, when you get to info you can change the name of the app to cis411lab4-[GITHUB_HANDLE]. Click create resources. 
+4. Wait for service to deploy.
+5. Click the live app button and append /graphql to the end. You will see graphql running!  
+ ![Live Application](assets/digitalOcean_success.png) 
+6. **Include this URL in your lab report.**
 
 # Step 6: Configure CircleCI for CD to Digital Ocean
 
 1. From the menu on the digital ocean homepage scroll to the bottom and click API. 
-2. Name the token and click generate, copy the token.
+![api](/assets/do3.png)
+   
+2. Click the generate new token button, name the token, and click generate, copy the token.
+![api_key](assets/digitalOcean_api_key.png)
 
 3. [Open the CircleCI](https://circleci.com/dashboard) user interface and navigate to: 
 ```
 Settings > Projects > [Click on the Gear icon in the far right corner of this project] > Environment Variables
 ```
 
-4. Add the following two environment variables to CircleCI: OCEAN_API_KEY equal to the Token generated from the command above and OCEAN_APP_NAME equal to the name of your digital ocean app: cis411lab4-[GITHUB_HANDLE].
-![HEROKU_APP_NAME](assets/ci_app_name.png "HEROKU_APP_NAME")
-![HEROKU_API_KEY](assets/ci_api_key.png "HEROKU_API_KEY")
-   
-![api_key](assets/digitalOcean_api_key.png)
+4. Add the following two environment variables to CircleCI: OCEAN_API_KEY equal to the Token generated from the command above and OCEAN_APP_NAME equal to the name of your digital ocean app: cis411lab4-[GITHUB_HANDLE]. Change the information in the screenshots to show what it would look like for Digital Ocean (as described above).
+![OCEAN_APP_NAME](/assets/ev1.png)
+![OCEAN_API_KEY](assets/ev2.png)
 
 5. Open the ```.circleci/config.yml``` file and add the following contents to the end of the file:
 ```
-  deploy:
+deploy:
     docker:
       - image: buildpack-deps:trusty
     steps:
       - checkout
       - run:
-          name: Deploy Main to Digital Ocean
+          name: Install dependencies
           command: |
-            git push https://heroku:$OCEAN_API_KEY@git.OCEAN.com/$OCEAN_APP_NAME.git main
+            sudo apt-get update
+            sudo apt-get install -y python3-pip
+            pip3 install awscli
+            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+      - run:
+          name: Install doctl
+          command: |
+            wget https://github.com/digitalocean/doctl/releases/download/v1.64.0/doctl-1.64.0-linux-amd64.tar.gz
+            tar xf doctl-1.64.0-linux-amd64.tar.gz
+            sudo mv doctl /usr/local/bin
+            rm doctl-1.64.0-linux-amd64.tar.gz
+      - run:
+          name: Authenticate with DigitalOcean
+          command: |
+            doctl auth init --access-token $OCEAN_API_KEY
+            doctl kubernetes cluster kubeconfig save mycluster
+            kubectl config use-context do-myapp
+      - run:
+          name: Deploy to DigitalOcean
+          command: |
+            kubectl apply -f k8s
 
 workflows:
   version: 2
