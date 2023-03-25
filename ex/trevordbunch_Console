@@ -1,0 +1,191 @@
+Trevors-MBP:Messiah trevorbunch$ cd cis411_lab2
+Trevors-MBP:cis411_lab2 trevorbunch$ npm install
+
+> date-fns@2.0.0-alpha.25 postinstall /Users/trevorbunch/Documents/GitHub/Messiah/cis411_lab2/node_modules/date-fns
+> node ./docs/printV2Notice.js
+
+
+🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+  Thank you for testing (⩗) date-fns v2!
+
+  In v2 we've introduced a number of breaking changes
+  that make date-fns even more consistent and reliable.
+  Please read the changelog carefully: https://git.io/fxCWb
+
+  Please support us at Open Collective: https://opencollective.com/date-fns
+
+🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+added 625 packages from 352 contributors and audited 9130 packages in 8.44s
+found 97 vulnerabilities (2 moderate, 94 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+Trevors-MBP:cis411_lab2 trevorbunch$ npm start
+
+> cis411_lab0@0.0.1 start /Users/trevorbunch/Documents/GitHub/Messiah/cis411_lab2
+> node server.js
+
+Express GraphQL Server Now Running On localhost:4000/graphql
+^C
+
+Comments submitted to Anne Mathews with CC to Devi Suberi (Advisor)
+
+Trevors-MBP:cis411_lab2 trevorbunch$ docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: trevordbunch
+Password: 
+Login Succeeded
+Trevors-MBP:cis411_lab2 trevorbunch$ docker build -t lab2
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+Trevors-MBP:cis411_lab2 trevorbunch$ docker build -t lab2 .
+Sending build context to Docker daemon  91.33MB
+Step 1/7 : FROM node:11
+11: Pulling from library/node
+a4d8138d0f6b: Pull complete 
+dbdc36973392: Pull complete 
+f59d6d019dd5: Pull complete 
+aaef3e026258: Pull complete 
+6e454d3b6c28: Pull complete 
+c717a7c205aa: Pull complete 
+69b68470ed80: Pull complete 
+05a0d45743c9: Pull complete 
+d0523573a78c: Pull complete 
+Digest: sha256:67ca28addce8ae818b144114a9376a6603aba09069b7313618d37b38584abba1
+Status: Downloaded newer image for node:11
+ ---> 5b97b72da029
+Step 2/7 : WORKDIR /dist
+ ---> Running in ed3da32e44be
+Removing intermediate container ed3da32e44be
+ ---> 9e9ddce93820
+Step 3/7 : COPY package.json /dist
+ ---> 7011423de834
+Step 4/7 : RUN npm install
+ ---> Running in e4b1fb92578c
+npm WARN deprecated cross-spawn-async@2.2.5: cross-spawn no longer requires a build toolchain, use it instead
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN express-graphql@0.6.12 requires a peer of graphql@^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 but none is installed. You must install peer dependencies yourself.
+
+added 640 packages from 377 contributors and audited 10798 packages in 19.182s
+found 5 vulnerabilities (1 moderate, 3 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container e4b1fb92578c
+ ---> 0d9afaacc328
+Step 5/7 : COPY . /dist
+ ---> b3399c8cfea1
+Step 6/7 : CMD node server.js
+ ---> Running in d0ed1970f7bf
+Removing intermediate container d0ed1970f7bf
+ ---> 332732483178
+Step 7/7 : EXPOSE 4000
+ ---> Running in f04a512b446c
+Removing intermediate container f04a512b446c
+ ---> 6ebe6f6ab6a3
+Successfully built 6ebe6f6ab6a3
+Successfully tagged lab2:latest
+Trevors-MBP:cis411_lab2 trevorbunch$ docker run -p 4000:4000 lab2 &
+[1] 8604
+Trevors-MBP:cis411_lab2 trevorbunch$ Express GraphQL Server Now Running On localhost:4000/graphql
+
+Trevors-MBP:cis411_lab2 trevorbunch$ docker stop $(docker ps -aq)
+d2a1c7ab77dd
+e2f19c4612d7
+54f53fac8714
+b95d196d7269
+73432ae02b3c
+d1312d68c876
+e7cadce22def
+3cb838a8c731
+8d75a873d626
+28253b73f352
+29db337e915c
+[1]+  Exit 137                docker run -p 4000:4000 lab2
+Trevors-MBP:cis411_lab2 trevorbunch$ heroku login
+heroku: Press any key to open up the browser to login or q to exit: 
+Opening browser to https://cli-auth.heroku.com/auth/browser/846ca046-6c5c-448c-b3f2-b6c8db35121e
+Logging in... done
+Logged in as trevor.bunch@gmail.com
+Trevors-MBP:cis411_lab2 trevorbunch$ heroku apps:create cis411lab2-trevordbunch -b heroku/nodejs
+ ›   Warning: heroku update available from 7.26.2 to 7.35.0.
+Creating ⬢ cis411lab2-trevordbunch... done
+Setting buildpack to heroku/nodejs... done
+https://cis411lab2-trevordbunch.herokuapp.com/ | https://git.heroku.com/cis411lab2-trevordbunch.git
+Trevors-MBP:cis411_lab2 trevorbunch$ git push heroku master
+Enumerating objects: 129, done.
+Counting objects: 100% (129/129), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (69/69), done.
+Writing objects: 100% (129/129), 3.38 MiB | 7.39 MiB/s, done.
+Total 129 (delta 57), reused 110 (delta 48)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Node.js app detected
+remote:        
+remote: -----> Creating runtime environment
+remote:        
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=true
+remote:        NODE_VERBOSE=false
+remote:        
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  11.x
+remote:        engines.npm (package.json):   6.4.1
+remote:        
+remote:        Resolving node version 11.x...
+remote:        Downloading and installing node 11.15.0...
+remote:        Bootstrapping npm 6.4.1 (replacing 6.7.0)...
+remote:        npm 6.4.1 installed
+remote:        
+remote: -----> Installing dependencies
+remote:        Installing node modules (package.json + package-lock)
+remote:        
+remote:        > date-fns@2.0.0-alpha.25 postinstall /tmp/build_7a206b984a4316ecdfe61ba38a2ae5df/node_modules/date-fns
+remote:        > node ./docs/printV2Notice.js
+remote:        
+remote:        
+remote:        🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+remote:        
+remote:          Thank you for testing (⩗) date-fns v2!
+remote:        
+remote:          In v2 we've introduced a number of breaking changes
+remote:          that make date-fns even more consistent and reliable
+remote:          Please read the changelog carefully: https://git.io/fxCWb
+remote:        
+remote:          Please support us at Open Collective: https://opencollective.com/date-fns
+remote:        
+remote:        🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+remote:        
+remote:        added 625 packages from 352 contributors and audited 9130 packages in 16.248s
+remote:        found 97 vulnerabilities (2 moderate, 94 high, 1 critical)
+remote:          run `npm audit fix` to fix them, or `npm audit` for details
+remote:        
+remote: -----> Build
+remote:        
+remote: -----> Pruning devDependencies
+remote:        removed 173 packages and audited 8760 packages in 5.027s
+remote:        found 81 vulnerabilities (1 moderate, 80 high)
+remote:          run `npm audit fix` to fix them, or `npm audit` for details
+remote:        
+remote: -----> Caching build
+remote:        - node_modules
+remote:        
+remote: -----> Build succeeded!
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 35.2M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://cis411lab2-trevordbunch.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/cis411lab2-trevordbunch.git
+ * [new branch]      master -> master
+Trevors-MBP:cis411_lab2 trevorbunch$

@@ -1,0 +1,9 @@
+node_modules
+labreports
+assets
+LICENSE
+LAB_INSTRUCTIONS.md
+README.md
+script.sh
+*.pem
+google-cloud-sdk-2/*
